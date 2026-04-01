@@ -55,3 +55,32 @@ header .barra-vermelho {
     background-color: #a50044;
     height: 10px;
 }
+
+main #inicio {
+    background-image: linear-gradient(to bottom, transparent  20%, #004d98 80%), url(https://tntsports.com.br/__export/1591038321193/sites/esporteinterativo/img/2020/06/01/gettyimages-1146462693-594x594.jpg);
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    justify-content: flex-end;
+    padding: 20px;
+    width: 100%;
+}
+
+main #inicio h2 {
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+main #inicio p {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+    margin: 0 40px;
+    margin-bottom: 10px;
+    text-align: center;
+}
