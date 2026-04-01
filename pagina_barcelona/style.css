@@ -10,7 +10,7 @@ html, body {
 }
 
 header {
-    background-color: white;
+    background-color: #fffdec;
     display: flex;
     flex-direction: column;
 }
@@ -56,8 +56,12 @@ header .barra-vermelho {
     height: 10px;
 }
 
+main {
+    background: linear-gradient(to bottom, #7A263A 5%, #272e61 80%);
+}
+
 main #inicio {
-    background-image: linear-gradient(to bottom, transparent  20%, #004d98 80%), url(https://tntsports.com.br/__export/1591038321193/sites/esporteinterativo/img/2020/06/01/gettyimages-1146462693-594x594.jpg);
+    background-image: linear-gradient(to bottom, transparent  20%, #272e61 80%), url(https://tntsports.com.br/__export/1591038321193/sites/esporteinterativo/img/2020/06/01/gettyimages-1146462693-594x594.jpg);
     background-size: cover;
     background-position: center;
     align-items: center;
@@ -74,6 +78,7 @@ main #inicio h2 {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 2.5em;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 main #inicio p {
@@ -83,4 +88,65 @@ main #inicio p {
     margin: 0 40px;
     margin-bottom: 10px;
     text-align: center;
+}
+
+main #historia {
+    background-color: #fffdec;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    margin: 40px;
+    padding: 0 50px;
+}
+
+main #historia h2 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 2.2em;
+    margin: 50px 0;
+    text-align: center;
+}
+
+main #historia article {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+main #historia article h3 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+main #historia article .icone {
+    margin-right: 5px;
+}
+
+main #historia article figure {
+    margin: 20px;
+}
+
+main #historia article figure img {
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+    width: 600px;
+}
+
+main #historia article figure figcaption {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9em;
+    margin-top: 10px;
+}
+
+main #historia article p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1em;
+    line-height: 1.6;
+    text-align: justify;
 }
