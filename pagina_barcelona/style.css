@@ -150,3 +150,117 @@ main #historia article p {
     line-height: 1.6;
     text-align: justify;
 }
+
+main #titulos {
+    background-color: #fffdec;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    margin: 40px;
+    padding: 0 50px;
+}
+
+main #titulos h2 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 2.2em;
+    margin: 50px 0;
+    text-align: center;
+}
+
+main #titulos section {
+    margin-bottom: 50px;
+}
+
+main #titulos #titulos-destaque {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+main #titulos #titulos-destaque h3 {
+    width: 100%;
+    text-align: center;
+}
+
+main #titulos #titulos-destaque #cards-titulos {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+}
+
+main #titulos #titulos-destaque #cards-titulos .card-titulo {
+    align-items: center;
+    background-color: #272e61;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    width: 300px;
+    padding: 30px;
+}
+
+main #titulos #titulos-destaque #cards-titulos .card-titulo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: 0.2s;
+}
+
+#todos-titulos h3 {
+    width: 100%;
+    text-align: center;
+}
+
+main #titulos #titulos-destaque #cards-titulos .card-titulo figure img {
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+}
+
+main #titulos #titulos-destaque #cards-titulos .card-titulo figure figcaption {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.8em;
+    margin-top: 10px;
+    color: white
+}
+
+main #titulos #titulos-destaque #cards-titulos .card-titulo h4 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1.1em;
+    color: white;
+}
+
+main #titulos #titulos-destaque #cards-titulos .card-titulo figure {
+    margin: 20px 0;
+}
+
+main #titulos #titulos-destaque h3, main #titulos #todos-titulos h3 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+main #titulos p, 
+main #titulos #titulos-destaque article p,
+main #titulos #todos-titulos ul li {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+}
+
+main #titulos p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 50px;
+}
+
+main #titulos #titulos-destaque article p {
+    font-size: 1em;
+    line-height: 1.4;
+    color: white;
+} 
+
+
