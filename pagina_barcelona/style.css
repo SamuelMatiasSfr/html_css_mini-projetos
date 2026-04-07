@@ -1,3 +1,5 @@
+/* Estilo Normal */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -41,19 +43,24 @@ header .barra-vermelho {
 }
 
 nav {
+    display: flex;
+    align-items: center;
     margin: 20px;
 }
 
 nav a {
     color: black;
+    cursor: pointer;
     font-size: 1.1em;
     margin: 0 10px;
     text-decoration: none;
 }
 
-nav a:hover {
-    font-size: 1.2em;
-    transition: 0.2s;
+@media (min-width: 768px) {
+    nav a:hover {
+        font-size: 1.2em;
+        transition: 0.2s;
+    }
 }
 
 .secao-inicio {
@@ -82,6 +89,7 @@ nav a:hover {
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.2em;
+    line-height: 1.5;
     margin: 0 40px;
     margin-bottom: 10px;
     text-align: center;
@@ -116,6 +124,9 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     gap: 25px;
+}
+
+.article-historia, .subsecao-titulos {
     margin-bottom: 50px;
 }
 
@@ -150,10 +161,12 @@ nav a:hover {
     padding: 30px;
 }
 
-.card-titulo-destacado:hover, .card-jogador:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    transition: 0.2s;
+@media (min-width: 768px) {
+    .card-titulo-destacado:hover, .card-jogador:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        transition: 0.2s;
+    }
 }
 
 .cards-jogadores {
@@ -161,6 +174,7 @@ nav a:hover {
     flex-wrap: wrap;
     gap: 25px;
     justify-content: center;
+    padding-bottom: 50px;
 }
 
 .card-jogador {
@@ -228,9 +242,11 @@ footer .redes-sociais .icone {
     font-size: 1.5em;
 }
 
-footer .redes-sociais .icone:hover {
-    transform: scale(1.2);
-    transition: 0.2s;
+@media (min-width: 768px) {
+    footer .redes-sociais .icone:hover {
+        transform: scale(1.2);
+        transition: 0.2s;
+    }
 }
 
 .icone {
@@ -316,4 +332,119 @@ figure {
     font-size: 1em;
     line-height: 1.4;
     color: white;
+}
+
+/* Estilo Responsivo */
+
+@media (max-width: 767px) {
+    .header-top {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .header-top img {
+        height: 80px;
+        width: 80px;
+    }
+
+    nav a {
+        color: black;
+        font-size: 1em;
+        margin: 0 3px;
+        text-decoration: none;
+    }
+
+    .secao-inicio {
+        height: 350px;
+        padding: 10px;
+    }
+
+    .secao-inicio h1 {
+        font-size: 1.8em;
+    }
+
+    .secao-inicio p {
+        font-size: 1em;
+    }
+
+    .conteudo-principal {
+        padding: 20px;
+    }
+
+    .secao-principal {
+        padding: 0 20px;
+    }
+
+    .titulo-principal {
+        font-size: 1.5em;
+    }
+
+    .titulo-secao {
+        font-size: 1.2em;
+    }
+
+    .subsecao-todos-titulos {
+        flex-direction: column;
+        gap:20px
+    }
+
+    .cards-titulos-destacados {
+        flex-direction: column;
+    }
+
+    .card-titulo-destacado {
+        width: 100%;
+    }
+
+    .cards-jogadores {
+        flex-direction: column;
+    }
+
+    .card-jogador {
+        width: 100%;
+        height: 400px;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 15px;
+        height: auto;
+        padding: 20px;
+    }
+
+    footer p {
+        text-align: center;
+    }
+
+    footer .redes-sociais {
+        justify-content: center;
+    }
+
+    footer .redes-sociais .icone {
+        font-size: 2em;
+    }
+
+    figure {
+        margin: 10px;
+    }
+
+    .img-grande {
+        height: 200px;
+        width: 100%;
+    }
+
+    .legenda-menor {
+        font-size: 0.7em;
+    }
+
+    .paragrafo {
+        font-size: 1em;
+    }
+
+    .paragrafo-card {
+        text-align:start;
+        font-size: 0.9em;
+    }
+
 }
