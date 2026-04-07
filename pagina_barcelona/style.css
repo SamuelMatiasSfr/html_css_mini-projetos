@@ -15,37 +15,6 @@ header {
     flex-direction: column;
 }
 
-header .header-top {
-    align-items: center;
-    display: flex;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    height: 80px;
-    justify-content: space-between;
-    position: relative;
-}
-
-header .header-top img {
-    height: 100px;
-    margin: 20px;
-    width: 100px;
-}
-
-header .header-top nav {
-    margin: 20px;
-}
-
-header .header-top nav a {
-    color: black;
-    font-size: 1.1em;
-    margin: 0 10px;
-    text-decoration: none;
-}
-
-header .header-top nav a:hover {
-    font-size: 1.2em;
-    transition: 0.2s;
-}
-
 header .barra-azul {
     background-color: #004d98;
     height: 10px;
@@ -56,11 +25,42 @@ header .barra-vermelho {
     height: 10px;
 }
 
+.header-top {
+    align-items: center;
+    display: flex;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    height: 80px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.header-top img {
+    height: 100px;
+    margin: 20px;
+    width: 100px;
+}
+
+nav {
+    margin: 20px;
+}
+
+nav a {
+    color: black;
+    font-size: 1.1em;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    font-size: 1.2em;
+    transition: 0.2s;
+}
+
 main {
     background: linear-gradient(to bottom, #7A263A 5%, #272e61 80%);
 }
 
-main #inicio {
+.secao-inicio {
     background-image: linear-gradient(to bottom, transparent  20%, #272e61 80%), url(https://tntsports.com.br/__export/1591038321193/sites/esporteinterativo/img/2020/06/01/gettyimages-1146462693-594x594.jpg);
     background-size: cover;
     background-position: center;
@@ -73,7 +73,7 @@ main #inicio {
     width: 100%;
 }
 
-main #inicio h2 {
+.secao-inicio h2 {
     color: white;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 2.5em;
@@ -81,7 +81,7 @@ main #inicio h2 {
     text-align: center;
 }
 
-main #inicio p {
+.secao-inicio p {
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.2em;
@@ -90,24 +90,32 @@ main #inicio p {
     text-align: center;
 }
 
-main #historia {
+
+.secao-principal {
     background-color: #fffdec;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
     display: flex;
     flex-direction: column;
-    margin: 40px;
+    margin: 50px;
     padding: 0 50px;
 }
 
-main #historia h2 {
+.titulo-principal {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 2.2em;
     margin: 50px 0;
     text-align: center;
 }
 
-main #historia article {
+.subsecao-todos-titulos {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.article-historia, .subsecao-titulos, .article-jogador {
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -115,152 +123,116 @@ main #historia article {
     margin-bottom: 50px;
 }
 
-main #historia article h3 {
+.titulo-secao {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 1.5em;
     margin-bottom: 20px;
+    text-align: center;
 }
 
-main #historia article .icone {
+.icone {
     margin-right: 5px;
 }
 
-main #historia article figure {
-    margin: 20px;
-}
-
-main #historia article figure img {
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    height: 400px;
-    object-fit: cover;
-    object-position: center;
-    width: 600px;
-}
-
-main #historia article figure figcaption {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 0.9em;
-    margin-top: 10px;
-}
-
-main #historia article p {
+.paragrafo {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.1em;
     line-height: 1.6;
     text-align: justify;
 }
 
-main #titulos {
-    background-color: #fffdec;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+figure {
+    margin: 20px;
+}
+
+.figura-titulo {
     display: flex;
     flex-direction: column;
-    margin: 40px;
-    padding: 0 50px;
+    align-items: center;
+    margin: 5px;;
 }
 
-main #titulos h2 {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 2.2em;
-    margin: 50px 0;
-    text-align: center;
+.img-grande, .img-pequena, .img-titulo {
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    object-fit: cover;
+    object-position: center;
 }
 
-main #titulos section {
-    margin-bottom: 50px;
+.img-grande {
+    height: 400px;
+    width: 600px;
 }
 
-main #titulos #titulos-destaque {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-}
-
-main #titulos #titulos-destaque h3 {
+.img-pequena {
+    height: 200px;
     width: 100%;
-    text-align: center;
 }
 
-main #titulos #titulos-destaque #cards-titulos {
+.img-titulo {
+    height: 200px;
+    width: 150px;
+}
+
+.legenda-maior, .legenda-menor, .legenda-titulo {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+}
+
+.legenda-maior {
+    font-size: 0.9em;
+}
+
+.legenda-menor {
+    font-size: 0.8em;
+    color: white
+}
+
+.legenda-titulo {
+    font-size: 0.95em;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+}
+
+.legenda-titulo span {
+    display: block;
+}
+
+.cards-titulos-destacados {
     display: flex;
     gap: 25px;
     justify-content: center;
 }
 
-main #titulos #titulos-destaque #cards-titulos .card-titulo {
+.card-titulo-destacado {
     align-items: center;
     background-color: #272e61;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     display: flex;
     flex-direction: column;
-    height: 500px;
-    width: 300px;
+    width: 30%;
     padding: 30px;
 }
 
-main #titulos #titulos-destaque #cards-titulos .card-titulo:hover {
+.card-titulo-destacado:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     transition: 0.2s;
 }
 
-#todos-titulos h3 {
-    width: 100%;
-    text-align: center;
-}
-
-main #titulos #titulos-destaque #cards-titulos .card-titulo figure img {
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    height: 200px;
-    object-fit: cover;
-    object-position: center;
-    width: 100%;
-}
-
-main #titulos #titulos-destaque #cards-titulos .card-titulo figure figcaption {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 0.8em;
-    margin-top: 10px;
-    color: white
-}
-
-main #titulos #titulos-destaque #cards-titulos .card-titulo h4 {
+.card-titulo-destacado h4 {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 1.1em;
     color: white;
 }
 
-main #titulos #titulos-destaque #cards-titulos .card-titulo figure {
-    margin: 20px 0;
-}
-
-main #titulos #titulos-destaque h3, main #titulos #todos-titulos h3 {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 1.5em;
-    margin-bottom: 20px;
-}
-
-main #titulos p, 
-main #titulos #titulos-destaque article p,
-main #titulos #todos-titulos ul li {
+.card-titulo-destacado p {
     font-family: Arial, Helvetica, sans-serif;
     text-align: justify;
-}
-
-main #titulos p {
-    font-size: 1.1em;
-    line-height: 1.6;
-    margin-bottom: 50px;
-}
-
-main #titulos #titulos-destaque article p {
     font-size: 1em;
     line-height: 1.4;
     color: white;
-} 
-
+}
 
