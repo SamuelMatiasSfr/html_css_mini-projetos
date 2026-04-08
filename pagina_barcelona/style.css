@@ -1,4 +1,4 @@
-/* Estilo Normal */
+/* === CONFIGURAÇÕES GERAIS === */
 
 * {
     box-sizing: border-box;
@@ -11,23 +11,26 @@ html, body {
     width: 100%;
 }
 
+
+/* === HEADER === */
+
 header {
     background-color: #fffdec;
     display: flex;
     flex-direction: column;
 }
 
-header .barra-azul {
+.header-bar-blue {
     background-color: #004d98;
     height: 10px;
 }
 
-header .barra-vermelho {
+.header-bar-red {
     background-color: #a50044;
     height: 10px;
 }
 
-.header-top {
+.header-content {
     align-items: center;
     display: flex;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -36,15 +39,15 @@ header .barra-vermelho {
     position: relative;
 }
 
-.header-top img {
+.header-content img {
     height: 100px;
     margin: 20px;
     width: 100px;
 }
 
 nav {
-    display: flex;
     align-items: center;
+    display: flex;
     margin: 20px;
 }
 
@@ -63,11 +66,14 @@ nav a {
     }
 }
 
-.secao-inicio {
+
+/* === HERO SECTION (INÍCIO) === */
+
+.hero-section {
+    align-items: center;
     background-image: linear-gradient(to bottom, transparent  20%, #272e61 80%), url(https://tntsports.com.br/__export/1591038321193/sites/esporteinterativo/img/2020/06/01/gettyimages-1146462693-594x594.jpg);
     background-size: cover;
     background-position: center;
-    align-items: center;
     display: flex;
     flex-direction: column;
     height: 500px;
@@ -77,7 +83,7 @@ nav a {
     width: 100%;
 }
 
-.secao-inicio h1 {
+.hero-section h1 {
     color: white;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 2.5em;
@@ -85,17 +91,19 @@ nav a {
     text-align: center;
 }
 
-.secao-inicio p {
+.hero-section p {
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.2em;
     line-height: 1.5;
-    margin: 0 40px;
-    margin-bottom: 10px;
+    margin: 0 40px 10px;
     text-align: center;
 }
 
-.conteudo-principal {
+
+/* === MAIN CONTENT (PARTE PRINCIPAL) === */
+
+.main-content {
     background: linear-gradient(to bottom, #7A263A 5%, #272e61 80%);
     display: flex;
     flex-direction: column;
@@ -103,7 +111,7 @@ nav a {
     padding: 50px;
 }
 
-.secao-principal {
+.main-section {
     background-color: #fffdec;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
@@ -112,64 +120,66 @@ nav a {
     padding: 0 50px;
 }
 
-.titulo-principal {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 2.2em;
-    margin: 50px 0;
-    text-align: center;
-}
 
-.article-historia, .subsecao-titulos, .card-jogador {
+/* === HISTORY SECTION (HISTÓRIA) === */
+
+.history-article{
     align-items: center;
     display: flex;
     flex-direction: column;
     gap: 25px;
-}
-
-.article-historia, .subsecao-titulos {
     margin-bottom: 50px;
 }
 
-.titulo-secao {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 1.5em;
-    margin-bottom: 20px;
-    text-align: center;
-}
 
-.subsecao-todos-titulos {
+/* === TITLES SECTION (TÍTULOS) === */
+
+.titles-subsection {
     align-items: center;
     display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.titles-list {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
     justify-content: center;
     list-style: none;
 }
 
-.cards-titulos-destacados {
+.featured-conquest-cards {
     display: flex;
     gap: 25px;
     justify-content: center;
 }
 
-.card-titulo-destacado {
+.conquest-card {
     align-items: center;
     background-color: #272e61;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     display: flex;
     flex-direction: column;
-    width: 30%;
     padding: 30px;
+    width: 30%;
 }
 
 @media (min-width: 768px) {
-    .card-titulo-destacado:hover, .card-jogador:hover {
-        transform: translateY(-5px);
+    .conquest-card:hover {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        transform: translateY(-5px);
         transition: 0.2s;
     }
 }
 
-.cards-jogadores {
+
+/* === PLAYERS SECTION (JOGADORES) === */
+
+.players-cards {
     display: flex;
     flex-wrap: wrap;
     gap: 25px;
@@ -177,19 +187,30 @@ nav a {
     padding-bottom: 50px;
 }
 
-.card-jogador {
+.player-card {
+    align-items: center;
     background-size: cover;
     background-position: center;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     display: flex;
     flex-direction: column;
+    gap: 25px;
     justify-content: flex-end;
     height: 500px;
     width: 30%;
     padding: 20px;
 }
 
+@media (min-width: 768px) {
+    .player-card:hover {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        transform: translateY(-5px);
+        transition: 0.2s;
+    }
+}
+
+/* cards específicos dos jogadores */
 .puyol {
     background-image: linear-gradient(to bottom, transparent  20%, #272e61 80%), url(https://thumbs.dreamstime.com/b/carles-puyol-de-fc-barcelona-21863310.jpg);
 }
@@ -214,10 +235,123 @@ nav a {
     background-image: linear-gradient(to bottom, transparent  20%, #272e61 80%), url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVq7zq5cQHBL0AA0GFSFVxCvowoLpNRAC2rQ&s);
 }
 
-footer {
-    background-color: #7A263A;
+
+/* === SECTIONS (COMPONENTES REUTILIZÁVEIS) === */
+
+.section-title {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 2.2em;
+    margin: 50px 0;
+    text-align: center;
+}
+
+.section-subtitle {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.section-text {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1em;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+
+/* === CARDS (COMPONENTES REUTILIZÁVEIS) === */
+
+.card-title {
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.card-text {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+
+/* === FIGURAS, IMAGENS E LEGENDAS === */
+
+.figure-standard {
+    margin: 20px;
+}
+
+.figure-trophy {
     display: flex;
+    flex-direction: column;
     align-items: center;
+    margin: 5px;;
+}
+
+.image-large, .image-small, .image-trophy {
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    object-fit: cover;
+    object-position: center;
+}
+
+.image-large {
+    height: 400px;
+    width: 600px;
+}
+
+.image-small {
+    height: 200px;
+    width: 100%;
+}
+
+.image-trophy {
+    height: 180px;
+    width: 120px;
+}
+
+.caption-large, .caption-small, .caption-title {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+}
+
+.caption-large {
+    font-size: 0.9em;
+}
+
+.caption-small {
+    font-size: 0.8em;
+    color: white;
+}
+
+.caption-title {
+    font-size: 0.8em;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+}
+
+.caption-title span {
+    display: block;
+}
+
+
+/* === ÍCONES === */
+
+.icon {
+    margin-right: 5px;
+}
+
+
+/* === FOOTER === */
+
+footer {
+    align-items: center;
+    background-color: #7A263A;
     color: white;
     display: flex;
     font-family: Arial, Helvetica, sans-serif;
@@ -231,119 +365,37 @@ footer img {
     width: 50px;
 }
 
-footer .redes-sociais {
+.social-links {
     display: flex;
     gap: 15px;
 }
 
-footer .redes-sociais .icone {
+.social-links .icon {
     color: white;
     cursor: pointer;
     font-size: 1.5em;
 }
 
 @media (min-width: 768px) {
-    footer .redes-sociais .icone:hover {
+    .social-links .icon:hover {
         transform: scale(1.2);
         transition: 0.2s;
     }
 }
 
-.icone {
-    margin-right: 5px;
-}
 
-.paragrafo {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.1em;
-    line-height: 1.6;
-    text-align: justify;
-}
-
-figure {
-    margin: 20px;
-}
-
-.figura-titulo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 5px;;
-}
-
-.img-grande, .img-pequena, .img-titulo {
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    object-fit: cover;
-    object-position: center;
-}
-
-.img-grande {
-    height: 400px;
-    width: 600px;
-}
-
-.img-pequena {
-    height: 200px;
-    width: 100%;
-}
-
-.img-titulo {
-    height: 200px;
-    width: 150px;
-}
-
-.legenda-maior, .legenda-menor, .legenda-titulo {
-    font-family: Arial, Helvetica, sans-serif;
-    margin-top: 10px;
-}
-
-.legenda-maior {
-    font-size: 0.9em;
-}
-
-.legenda-menor {
-    font-size: 0.8em;
-    color: white;
-}
-
-.legenda-titulo {
-    font-size: 0.95em;
-    font-weight: bold;
-    text-align: center;
-    width: 100%;
-}
-
-.legenda-titulo span {
-    display: block;
-}
-
-.titulo-card {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 1.1em;
-    font-weight: bold;
-    color: white;
-    text-align: center;
-}
-
-.paragrafo-card {
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: justify;
-    font-size: 1em;
-    line-height: 1.4;
-    color: white;
-}
-
-/* Estilo Responsivo */
+/* RESPONSIVIDADE */
 
 @media (max-width: 767px) {
-    .header-top {
+
+    /* Header */
+    .header-content {
         display: flex;
         flex-direction: column;
         height: auto;
     }
 
-    .header-top img {
+    .header-content img {
         height: 80px;
         width: 80px;
     }
@@ -355,57 +407,81 @@ figure {
         text-decoration: none;
     }
 
-    .secao-inicio {
+    /* Hero Section (Início) */
+    .hero-section {
         height: 350px;
         padding: 10px;
     }
 
-    .secao-inicio h1 {
+    .hero-section h1 {
         font-size: 1.8em;
     }
 
-    .secao-inicio p {
+    .hero-section p {
         font-size: 1em;
     }
 
-    .conteudo-principal {
+    /* Main Content (Parte Principal) */
+    .main-content {
         padding: 20px;
     }
 
-    .secao-principal {
+    .main-section {
         padding: 0 20px;
     }
 
-    .titulo-principal {
+    /* Titles Section (Títulos) */
+    .featured-conquest-cards {
+        flex-direction: column;
+    }
+
+    .conquest-card {
+        width: 100%;
+    }
+
+    /* Players Section (Jogadores) */
+    .players-cards {
+        flex-direction: column;
+    }
+
+    .player-card {
+        height: 400px;
+        width: 100%;
+    }
+
+    /* Sections (Componentes Reutilizáveis) */
+    .section-title {
         font-size: 1.5em;
     }
 
-    .titulo-secao {
+    .section-subtitle {
         font-size: 1.2em;
     }
 
-    .subsecao-todos-titulos {
-        flex-direction: column;
-        gap:20px
+    .section-text {
+        font-size: 1em;
     }
 
-    .cards-titulos-destacados {
-        flex-direction: column;
+    /* Cards (Componentes Reutilizáveis) */
+    .card-text {
+        font-size: 0.9em;
     }
 
-    .card-titulo-destacado {
+    /* Figures, Images and Captions */
+    .figure-standard {
+        margin: 10px;
+    }
+
+    .image-large {
+        height: 200px;
         width: 100%;
     }
 
-    .cards-jogadores {
-        flex-direction: column;
+    .caption-small {
+        font-size: 0.7em;
     }
 
-    .card-jogador {
-        width: 100%;
-        height: 400px;
-    }
-
+    /* Footer */
     footer {
         flex-direction: column;
         gap: 15px;
@@ -417,34 +493,12 @@ figure {
         text-align: center;
     }
 
-    footer .redes-sociais {
+    .social-links {
         justify-content: center;
     }
 
-    footer .redes-sociais .icone {
+    .social-links .icon {
         font-size: 2em;
-    }
-
-    figure {
-        margin: 10px;
-    }
-
-    .img-grande {
-        height: 200px;
-        width: 100%;
-    }
-
-    .legenda-menor {
-        font-size: 0.7em;
-    }
-
-    .paragrafo {
-        font-size: 1em;
-    }
-
-    .paragrafo-card {
-        text-align:start;
-        font-size: 0.9em;
     }
 
 }
