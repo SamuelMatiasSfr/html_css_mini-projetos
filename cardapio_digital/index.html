@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio Digital</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1><i class="fas fa-utensils icone"></i>Cardápio Digital</h1>
+
+        <nav>
+            <a href="#cardapio">Cardápio</a>
+            <a href="#pedido">Fazer Pedido</a>
+        </nav>
+    </header>
+    <main>
+        <section class="section" id="cardapio">
+            <h1 class="section-titulo">Cardápio</h1>
+
+            <section class="categoria">
+                <h2 class="categoria-titulo">Entradas</h2>
+
+                <article class="item">
+                    <h3 class="item-titulo">Bruschetta</h3>
+                    <img class="item-img" src="bruschetta.jpg" alt="Bruschetta">
+                    <p class="item-descricao">Pão italiano tostado com tomate, manjericão e azeite.</p>
+                    <span class="item-preco">R$ 15,00</span>
+                </article>
+
+                <article class="item">
+                    <h3 class="item-titulo">Salada Caprese</h3>
+                    <img class="item-img" src="caprese.jpg" alt="Salada Caprese">
+                    <p class="item-descricao">Tomate, mussarela de búfala, manjericão e azeite.</p>
+                    <span class="item-preco">R$ 18,00</span>
+                </article>
+
+                <article class="item">
+                    <h3 class="item-titulo">Ceviche</h3>
+                    <img class="item-img" src="ceviche.jpg" alt="Ceviche">
+                    <p class="item-descricao">Peixe marinado em suco de limão, cebola e coentro.</p>
+                    <span class="item-preco">R$ 20,00</span>
+                </article>
+            </section>
+
+            <section class="categoria">
+                <h2 class="categoria-titulo">Pratos Principais</h2>
+
+                <article class="item">
+                    <h3 class="item-titulo">Spaghetti Carbonara</h3>
+                    <img class="item-img" src="carbonara.jpg" alt="Spaghetti Carbonara">
+                    <p class="item-descricao">Massa com molho de ovos, queijo parmesão e pancetta.</p>
+                    <span class="item-preco">R$ 25,00</span>
+                </article>
+
+                <article class="item">
+                    <h3 class="item-titulo">Frango Grelhado</h3>
+                    <img class="item-img" src="frango.jpg" alt="Frango Grelhado">
+                    <p class="item-descricao">Peito de frango grelhado com ervas e limão.</p>
+                    <span class="item-preco">R$ 22,00</span>
+                </article>
+
+                <article class="item">
+                    <h3 class="item-titulo">Risoto de Cogumelos</h3>
+                    <img class="item-img" src="risoto.jpg" alt="Risoto de Cogumelos">
+                    <p class="item-descricao">Risoto cremoso com cogumelos frescos e parmesão.</p>
+                    <span class="item-preco">R$ 28,00</span>
+                </article>
+            </section>
+
+            <section class="categoria">
+                <h2 class="categoria-titulo">Sobremesas</h2>
+
+                <article class="item">
+                    <h3 class="item-titulo">Tiramisu</h3>
+                    <img class="item-img" src="tiramisu.jpg" alt="Tiramisu">
+                    <p class="item-descricao">Sobremesa italiana com café, mascarpone e cacau.</p>
+                    <span class="item-preco">R$ 12,00</span>
+                </article>
+
+                <article class="item">
+                    <h3 class="item-titulo">Pudim de Leite</h3>
+                    <img class="item-img" src="pudim.jpg" alt="Pudim de Leite">
+                    <p class="item-descricao">Pudim cremoso de leite condensado com calda de caramelo.</p>
+                    <span class="item-preco">R$ 10,00</span>
+                </article>
+
+                <article class="item">
+                    <h3 class="item-titulo">Mousse de Chocolate</h3>
+                    <img class="item-img" src="mousse.jpg" alt="Mousse de Chocolate">
+                    <p class="item-descricao">Mousse leve e aerada de chocolate amargo.</p>
+                    <span class="item-preco">R$ 14,00</span>
+                </article>
+        </section>
+
+        <section class="section" id="pedido">
+            <h1 class="section-titulo">Fazer Pedido</h1>
+
+            <form class="form">
+                <div class="form-row">
+                    <div class="form-field">
+                        <label for="nome">Nome: </label>
+                        <input type="text" id="nome" name="nome">
+                    </div>
+                    <div class="form-field">
+                        <label for="telefone">Telefone: </label>
+                        <input type="tel" id="telefone" name="telefone">
+                    </div>
+                </div>
+               
+                <div class="form-row">
+                    <div class="form-field">
+                        <label for="cep">CEP: </label>
+                        <input type="text" id="cep" name="cep">
+                    </div>
+                    <div class="form-field">
+                        <label for="numero">Número: </label>
+                        <input type="text" id="numero" name="numero">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-field">
+                        <label for="entrada">Entrada: </label>
+                        <select id="entrada" name="entrada">
+                            <option value="bruschetta">Bruschetta</option>
+                            <option value="caprese">Salada Caprese</option>
+                            <option value="ceviche">Ceviche</option>
+                        </select>
+                    </div>
+                    <div class="form-field">
+                        <label for="prato">Prato Principal: </label>
+                        <select id="prato" name="prato">
+                            <option value="carbonara">Spaghetti Carbonara</option>
+                            <option value="frango">Frango Grelhado</option>
+                            <option value="risoto">Risoto de Cogumelos</option>
+                        </select>
+                    </div>
+                    <div class="form-field">
+                        <label for="sobremesa">Sobremesa: </label>
+                        <select id="sobremesa" name="sobremesa">
+                            <option value="tiramisu">Tiramisu</option>
+                            <option value="pudim">Pudim de Leite</option>
+                            <option value="mousse">Mousse de Chocolate</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
