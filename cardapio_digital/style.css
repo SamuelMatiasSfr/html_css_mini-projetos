@@ -1,0 +1,56 @@
+/*=== CONFIGURAÇÕES INICIAIS ===*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: auto;
+    width: 100%;
+}
+
+body {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    background-color: #FCF9EA;
+}
+
+
+/*=== HEADER ===*/
+
+.header {
+    background-color: #FFA239;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.header-title {
+    color: #fff;
+    font-size: 2em;
+}
+
+.header-icon {
+    font-size: 0.9em;
+    margin-right: 10px;
+}
+
+.header-nav {
+    display: flex;
+    gap: 20px;
+}
+
+.header-nav-link {
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.header-nav-link:hover {
+    transform: translateY(-2px);
+    transition: 0.2s;
+}
