@@ -35,7 +35,7 @@ body {
 
 .header-icon {
     font-size: 0.9em;
-    margin-right: 10px;
+    margin: 10px;
 }
 
 .header-nav {
@@ -203,4 +203,32 @@ body {
     background-color: #ff9a26;
     transform: scale(1.03);
     transition: 0.2s;
+}
+
+/*=== FOOTER ===*/
+
+.footer {
+    background-color: #FFA239;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    padding: 40px 20px;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.footer-social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-icon {
+    font-size: 1.5em;
+    color: white;
+}
+
+.footer-icon:hover {
+    transform: scale(1.1);
+    transition: 0.2s;
+    cursor: pointer;
 }
