@@ -93,7 +93,7 @@ body {
 .category-items {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 25px;
 }
 
 .category-item {
@@ -105,6 +105,12 @@ body {
     flex-direction: column;
     align-items: center;
     width: 300px;
+}
+
+.category-item:hover {
+    transform: scale(1.02);
+    transition: 0.2s;
+    cursor: pointer;
 }
 
 .category-item-title {
@@ -131,4 +137,70 @@ body {
     color: #FCF9EA;
     font-size: 1.2em;
     font-weight: bold;
+}
+
+
+/*=== PEDIDO ===*/
+
+.order-form {
+    display: flex;
+    flex-direction: column;
+    background-color: #A8BBA3;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.order-form-row {
+    display: flex;
+    gap: 25px;
+    padding: 15px;
+    justify-content: space-between;
+}
+
+.order-form-field-input {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.order-form-field-select {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.order-form-label {
+    color: #FCF9EA;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.order-form-input, .order-form-select {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1em;
+    outline: none;
+}
+
+.order-form-input:focus, .order-form-select:focus {
+    box-shadow: 0 0 3px #ff9a26;
+}
+
+.order-form-button {
+    background-color: #FFA239;
+    color: #FCF9EA;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.order-form-button:hover {
+    background-color: #ff9a26;
+    transform: scale(1.03);
+    transition: 0.2s;
 }
