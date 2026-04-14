@@ -1,0 +1,56 @@
+/*=== CONFIGURAÇÕES GERAIS ===*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font-family: "Roboto", monospace;
+}
+
+
+/*=== HEADER ===*/
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    background-color: #202020;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-icon {
+    font-size: 1.5em;
+    color: #faf2f2;
+}
+
+.header-title {
+    font-size: 1.5em;
+    color: #faf2f2;
+}
+
+.header-nav {
+    display: flex;
+    gap: 15px;
+}
+
+.header-nav-link {
+    text-decoration: none;
+    color: #faf2f2;
+    font-size: 1em;
+    font-weight: bold;
+}
+
