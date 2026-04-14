@@ -13,6 +13,7 @@ html, body {
 
 body {
     font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 
@@ -187,6 +188,7 @@ body {
     border-radius: 8px;
     font-size: 1em;
     outline: none;
+    font-family: 'Poppins', sans-serif;
 }
 
 .order-form-input:focus, .order-form-select:focus {
@@ -203,6 +205,7 @@ body {
     font-size: 1.1em;
     font-weight: bold;
     cursor: pointer;
+    font-family: 'Poppins', sans-serif;
 }
 
 .order-form-button:hover {
