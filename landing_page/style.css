@@ -284,3 +284,71 @@ body {
     line-height: 1.5;
     text-align: justify;
 }
+
+
+/*=== SEÇÃO COMPRA ===*/
+
+.section-buy {
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to bottom, #0a0a0a 30%, #161616 70%);
+}
+
+.buy-title {
+    font-size: 2.5em;
+    color: #faf2f2;
+    text-align: center;
+}
+
+.buy-card {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    padding: 40px;
+    background-color: #faf2f2;
+    border-radius: 20px;
+}
+
+.buy-card-promotion {
+    display: flex;
+    flex-direction: column;
+}
+
+.buy-card-alert {
+    background-color: #aa0202;
+    padding: 10px 20px;
+    color: #faf2f2;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: bold;
+    width: fit-content;
+    margin-bottom: 35px;
+}
+
+.buy-card-text {
+    font-size: 1.3em;
+}
+
+.buy-card-price {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.buy-card-action {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.buy-card-button {
+    background: linear-gradient(90deg, #096e09 0%, #023d02 100%);
+    color: #faf2f2;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 15px 30px;
+    border-radius: 10px;
+    width: fit-content;
+}
