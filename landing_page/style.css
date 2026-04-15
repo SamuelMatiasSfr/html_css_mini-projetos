@@ -64,6 +64,7 @@ body {
 .main-section {
     display: flex;
     align-items: center;
+    gap: 40px;
     padding: 80px 80px;
 }
 
@@ -72,7 +73,6 @@ body {
 
 .section-intro {
     flex-direction: column;
-    gap: 40px;
     background: linear-gradient(to bottom, #000000 30%, #050612 70%);
 }
 
@@ -112,7 +112,6 @@ body {
 
 .section-about {
     background-color: #161616;
-    gap: 40px;
 }
 
 .about-image-product {
@@ -136,5 +135,45 @@ body {
     font-size: 1.5em;
     line-height: 1.5;
     color: #faf2f2;
+    text-align: justify;
+}
+
+
+/* === SEÇÃO BENEFÍCIOS ===*/
+
+.section-benefits {
+    flex-direction: column;
+    background: linear-gradient(90deg, #050612 0%, #000000 100%);
+}
+
+.benefits-title {
+    font-size: 2.5em;
+    color: #faf2f2;
+    text-align: center;
+}
+
+.benefits-container {
+    display: flex;
+    gap: 40px;
+}
+
+.benefit-card {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.benefit-card-icon {
+    font-size: 2.5em;
+    color: #faf2f2;
+}
+
+.benefit-card-title {
+    color: #faf2f2;
+}
+
+.benefit-card-description {
+    color: #faf2f2;
+    line-height: 1.5;
     text-align: justify;
 }
