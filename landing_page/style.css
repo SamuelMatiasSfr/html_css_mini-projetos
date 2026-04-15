@@ -177,3 +177,49 @@ body {
     line-height: 1.5;
     text-align: justify;
 }
+
+
+/*=== SEÇÃO TECNOLOGIAS ===*/
+
+.section-technologies {
+    flex-direction: column;
+    background: linear-gradient(90deg, #161616 0%, #0a0a0a 100%);
+}
+
+.technologies-title {
+    font-size: 2.5em;
+    color: #faf2f2;
+    text-align: center;
+}
+
+.technologies-paragraph {
+    font-size: 1.5em;
+    line-height: 1.5;
+    color: #faf2f2;
+    text-align: center;
+}
+
+.technologies-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 130px;
+    row-gap: 40px;
+}
+
+.technology-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    border: 1px solid #faf2f2;
+    border-radius: 10px;
+}
+
+.technology-card-icon {
+    font-size: 2em;
+    color: #faf2f2;
+}
+
+.technology-card-name {
+    color: #faf2f2;
+}
