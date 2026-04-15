@@ -23,7 +23,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 40px 60px;
-    background: linear-gradient(to bottom, #161616 30%, #0a0a0a 70%);
+    background-color: #161616;
 }
 
 .header-content {
@@ -351,4 +351,73 @@ body {
     padding: 15px 30px;
     border-radius: 10px;
     width: fit-content;
+}
+
+@media (min-width: 768px) {
+    .buy-card-button:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s ease;
+    }
+}
+
+
+/*=== SEÇÃO CONTATO ===*/
+
+.section-contact {
+    flex-direction: column;
+    align-items: center;
+    background-color: #0a0a0a;
+}
+
+.contact-title {
+    font-size: 2.5em;
+    color: #faf2f2;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    background-color: #faf2f2;
+    border-radius: 20px;
+    gap: 20px;
+    width: fit-content;
+}
+
+.contact-form-input {
+    padding: 15px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    width: 500px;
+    font-size: 1em;
+}
+
+.contact-form-textarea{
+    padding: 15px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    width: 500px;
+    height: 150px;
+    font-size: 1em;
+    font-family: "Roboto", monospace;
+}
+
+.contact-form-button {
+    background: linear-gradient(90deg, #050612 0%, #000000 100%);
+    color: #faf2f2;
+    text-align: center;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 15px 30px;
+    border-radius: 10px;
+    border: none;
+    width: fit-content;
+}
+
+@media (min-width: 768px) {
+    .contact-form-button:hover {
+        cursor: pointer;
+        transform: scale(1.05);
+        transition: transform 0.3s ease;
+    }
 }
