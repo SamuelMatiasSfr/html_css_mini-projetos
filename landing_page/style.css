@@ -112,6 +112,8 @@ body {
 
 .section-about {
     background-color: #161616;
+        background: linear-gradient(to bottom, #0a0a0a 0%, #161616 100%);
+
 }
 
 .about-image-product {
@@ -366,7 +368,7 @@ body {
 .section-contact {
     flex-direction: column;
     align-items: center;
-    background-color: #0a0a0a;
+    background: linear-gradient(90deg, #000000 30%, #050612 70%);
 }
 
 .contact-title {
@@ -421,3 +423,36 @@ body {
         transition: transform 0.3s ease;
     }
 }
+
+
+/*=== FOOTER ===*/
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 60px 80px;
+    background-color: #faf2f2;
+}
+
+.footer-alert {
+    background-color: #aa0202;
+    padding: 10px 20px;
+    color: #faf2f2;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: bold;
+    width: fit-content;
+}
+
+.footer-cta {
+    font-size: 2.5em;
+    font-weight: 500;
+}
+
+.footer-text {
+    font-size: 1.5em;
+    line-height: 1.5;
+} 
