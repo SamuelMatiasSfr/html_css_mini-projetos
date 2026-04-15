@@ -23,7 +23,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 40px 60px;
-    background: linear-gradient(to bottom, #202020 30%, #0a0a0a 70%);
+    background: linear-gradient(to bottom, #161616 30%, #0a0a0a 70%);
 }
 
 .header-content {
@@ -63,7 +63,7 @@ body {
 
 .main-section {
     display: flex;
-    flex-direction: column;
+    align-items: center;
     padding: 80px 80px;
 }
 
@@ -71,11 +71,9 @@ body {
 /*=== SEÇÃO INÍCIO ===*/
 
 .section-intro {
-    display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 40px;
-    background: linear-gradient(to bottom, #000000 30%, #09011d 70%);
+    background: linear-gradient(to bottom, #000000 30%, #050612 70%);
 }
 
 .intro-title {
@@ -109,3 +107,34 @@ body {
     }
 }
 
+
+/*=== SEÇÃO SOBRE ===*/
+
+.section-about {
+    background-color: #161616;
+    gap: 40px;
+}
+
+.about-image-product {
+    width: 400px;
+    border-radius: 20px;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.about-title {
+    font-size: 2.5em;
+    color: #faf2f2;
+    text-align: center;
+}
+
+.about-paragraph {
+    font-size: 1.5em;
+    line-height: 1.5;
+    color: #faf2f2;
+    text-align: justify;
+}
