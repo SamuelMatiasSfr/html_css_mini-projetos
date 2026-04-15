@@ -223,3 +223,64 @@ body {
 .technology-card-name {
     color: #faf2f2;
 }
+
+
+/*=== SEÇÃO DEPOIMENTOS ===*/
+
+.section-testimonials {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+    background-color: #050612;
+}
+
+.testimonials-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+}
+
+.testimonials-title {
+    font-size: 2em;
+    color: #faf2f2;
+}
+
+.testimonials-paragraph {
+    font-size: 1.5em;
+    line-height: 1.5;
+    color: #faf2f2;
+    text-align: center;
+}
+
+.testimonial-card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+    border: 1px solid #faf2f2;
+    border-radius: 10px;
+}
+
+.testimonial-card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px
+}
+
+.testimonial-card-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.testimonial-card-name {
+    color: #faf2f2;
+}
+
+.testimonial-card-feedback {
+    color: #faf2f2;
+    font-size: 1.2em;
+    line-height: 1.5;
+    text-align: justify;
+}
