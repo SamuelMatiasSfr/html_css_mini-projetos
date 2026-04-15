@@ -44,7 +44,7 @@ body {
 
 .header-nav {
     display: flex;
-    gap: 15px;
+    align-items: center;
 }
 
 .header-nav-link {
@@ -52,10 +52,22 @@ body {
     color: #faf2f2;
     font-size: 1em;
     font-weight: bold;
+    padding: 5px 10px;
+}
+
+@media (min-width: 768px) {
+    .header-nav-link:hover {
+        background-color: #faf2f2;
+        color: #000000;
+        
+        border-radius: 2px;
+        transition: all 0.2s;
+    }
 }
 
 
 /*=== MAIN ===*/
+
 .main {
     display: flex;
     flex-direction: column;
