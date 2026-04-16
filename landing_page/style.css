@@ -1,4 +1,6 @@
-/*=== CONFIGURAÇÕES GERAIS ===*/
+/* ============================================
+   1. CONFIGURAÇÕES GERAIS
+   ============================================ */
 
 * {
     margin: 0;
@@ -15,8 +17,9 @@ body {
     font-family: "Roboto", monospace;
 }
 
-
-/*=== HEADER ===*/
+/* ============================================
+   2. HEADER
+   ============================================ */
 
 .header {
     display: flex;
@@ -56,18 +59,19 @@ body {
     padding: 5px 10px;
 }
 
+/* Header - Hover (Desktop) */
 @media (min-width: 768px) {
     .header-nav-link:hover {
         background-color: #faf2f2;
         color: #000000;
-        
         border-radius: 2px;
         transition: all 0.2s;
     }
 }
 
-
-/*=== MAIN ===*/
+/* ============================================
+   3. MAIN (CONTEÚDO PRINCIPAL)
+   ============================================ */
 
 .main {
     display: flex;
@@ -81,8 +85,9 @@ body {
     padding: 80px;
 }
 
-
-/*=== SEÇÃO INÍCIO ===*/
+/* ============================================
+   4. SEÇÃO HERO (INÍCIO)
+   ============================================ */
 
 .section-hero {
     flex-direction: column;
@@ -113,15 +118,17 @@ body {
     width: fit-content;
 }
 
+/* Hero - Hover (Desktop) */
 @media (min-width: 768px) {
-    .hero-cta:hover {
+    .hero-button:hover {
         transform: scale(1.05);
         transition: transform 0.3s ease;
     }
 }
 
-
-/*=== SEÇÃO SOBRE ===*/
+/* ============================================
+   5. SEÇÃO SOBRE
+   ============================================ */
 
 .section-about {
     background-color: #161616;
@@ -152,8 +159,9 @@ body {
     text-align: justify;
 }
 
-
-/* === SEÇÃO BENEFÍCIOS ===*/
+/* ============================================
+   6. SEÇÃO BENEFÍCIOS
+   ============================================ */
 
 .section-benefits {
     flex-direction: column;
@@ -192,8 +200,9 @@ body {
     text-align: justify;
 }
 
-
-/*=== SEÇÃO TECNOLOGIAS ===*/
+/* ============================================
+   7. SEÇÃO TECNOLOGIAS
+   ============================================ */
 
 .section-technologies {
     flex-direction: column;
@@ -238,8 +247,9 @@ body {
     color: #faf2f2;
 }
 
-
-/*=== SEÇÃO DEPOIMENTOS ===*/
+/* ============================================
+   8. SEÇÃO DEPOIMENTOS
+   ============================================ */
 
 .section-testimonials {
     display: grid;
@@ -279,7 +289,7 @@ body {
 .testimonial-item-header {
     display: flex;
     align-items: center;
-    gap: 10px
+    gap: 10px;
 }
 
 .testimonial-item-image {
@@ -299,8 +309,9 @@ body {
     text-align: justify;
 }
 
-
-/*=== SEÇÃO COMPRA ===*/
+/* ============================================
+   9. SEÇÃO COMPRA
+   ============================================ */
 
 .section-buy {
     flex-direction: column;
@@ -371,6 +382,7 @@ body {
     font-size: 1.1em;
 }
 
+/* Buy Card - Hover (Desktop) */
 @media (min-width: 768px) {
     .buy-card-button:hover {
         transform: scale(1.05);
@@ -378,8 +390,9 @@ body {
     }
 }
 
-
-/*=== SEÇÃO CONTATO ===*/
+/* ============================================
+   10. SEÇÃO CONTATO
+   ============================================ */
 
 .section-contact {
     flex-direction: column;
@@ -411,7 +424,7 @@ body {
     font-size: 1em;
 }
 
-.contact-form-textarea{
+.contact-form-textarea {
     padding: 15px;
     border: 1px solid #000;
     border-radius: 5px;
@@ -433,6 +446,7 @@ body {
     width: fit-content;
 }
 
+/* Contact Form - Hover (Desktop) */
 @media (min-width: 768px) {
     .contact-form-button:hover {
         cursor: pointer;
@@ -441,8 +455,9 @@ body {
     }
 }
 
-
-/*=== FOOTER ===*/
+/* ============================================
+   11. FOOTER
+   ============================================ */
 
 .footer {
     display: flex;
@@ -467,24 +482,29 @@ body {
 .footer-headline {
     font-size: 2.5em;
     font-weight: 500;
+    text-align: center;
 }
 
 .footer-description {
     font-size: 1.5em;
     line-height: 1.5;
-} 
+    text-align: center;
+}
 
-
-/* === RESPONSIVIDADE ===*/
+/* ============================================
+   12. RESPONSIVIDADE (MOBILE)
+   ============================================ */
 
 @media (max-width: 767px) {
+    
     /* Header */
     .header {
         justify-content: center;
         padding: 20px 30px;
     }
 
-    .header-icon, .header-title {
+    .header-icon,
+    .header-title {
         font-size: 1.3em;
     }
 
@@ -492,12 +512,12 @@ body {
         display: none;
     }
 
-    /* Main */
+    /* Main - Sections */
     .section {
         padding: 40px;
     }
 
-    /* Seção Início */
+    /* Hero Section */
     .hero-title {
         font-size: 1.8em;
     }
@@ -511,7 +531,7 @@ body {
         padding: 10px 20px;
     }
 
-    /* Seção Sobre */
+    /* About Section */
     .section-about {
         flex-direction: column;
     }
@@ -528,7 +548,7 @@ body {
         font-size: 1em;
     }
 
-    /* Seção Benefícios */
+    /* Benefits Section */
     .benefits-title {
         font-size: 1.7em;
     }
@@ -550,7 +570,7 @@ body {
         font-size: 1.2em;
     }
 
-    /* Seção Tecnologias */
+    /* Technologies Section */
     .technologies-title {
         font-size: 1.7em;
     }
@@ -571,8 +591,8 @@ body {
         font-size: 1.2em;
     }
 
-    /* Seção Depoimentos */
-    .section-testimonials{
+    /* Testimonials Section */
+    .section-testimonials {
         grid-template-columns: 1fr;
     }
 
@@ -602,7 +622,7 @@ body {
         font-size: 1em;
     }
 
-    /* Seção Compra */
+    /* Buy Section */
     .buy-title {
         font-size: 1.7em;
     }
@@ -640,7 +660,7 @@ body {
         text-align: center;
     }
 
-    /* Seção Contato */
+    /* Contact Section */
     .contact-title {
         font-size: 1.7em;
     }
@@ -650,7 +670,8 @@ body {
         padding: 20px;
     }
 
-    .contact-form-input, .contact-form-textarea {
+    .contact-form-input,
+    .contact-form-textarea {
         width: 100%;
         font-size: 0.9em;
     }
@@ -677,6 +698,5 @@ body {
 
     .footer-description {
         font-size: 1.2em;
-        text-align: center;
     }
 }
