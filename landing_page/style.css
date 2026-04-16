@@ -26,7 +26,7 @@ body {
     background-color: #161616;
 }
 
-.header-content {
+.header-area-logo {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -40,6 +40,7 @@ body {
 .header-title {
     font-size: 1.5em;
     color: #faf2f2;
+    font-weight: bold;
 }
 
 .header-nav {
@@ -73,7 +74,7 @@ body {
     flex-direction: column;
 }
 
-.main-section {
+.section {
     display: flex;
     align-items: center;
     gap: 40px;
@@ -83,24 +84,24 @@ body {
 
 /*=== SEÇÃO INÍCIO ===*/
 
-.section-intro {
+.section-hero {
     flex-direction: column;
     background: linear-gradient(to bottom, #000000 30%, #050612 70%);
 }
 
-.intro-title {
+.hero-title {
     font-size: 2.5em;
     color: #faf2f2;
     text-align: center;
 }
 
-.intro-paragraph {
+.hero-subtitle {
     font-size: 1.5em;
     color: #faf2f2;
     text-align: center;
 }
 
-.intro-button-cta {
+.hero-button {
     background: linear-gradient(90deg, #096e09 0%, #023d02 100%);
     color: #faf2f2;
     text-decoration: none;
@@ -113,7 +114,7 @@ body {
 }
 
 @media (min-width: 768px) {
-    .intro-button-cta:hover {
+    .hero-cta:hover {
         transform: scale(1.05);
         transition: transform 0.3s ease;
     }
@@ -127,7 +128,7 @@ body {
     background: linear-gradient(to bottom, #0a0a0a 0%, #161616 100%);
 }
 
-.about-image-product {
+.about-image {
     width: 400px;
     border-radius: 20px;
 }
@@ -144,7 +145,7 @@ body {
     text-align: center;
 }
 
-.about-paragraph {
+.about-text {
     font-size: 1.5em;
     line-height: 1.5;
     color: #faf2f2;
@@ -170,22 +171,22 @@ body {
     gap: 40px;
 }
 
-.benefit-card {
+.benefit-item {
     display: flex;
     flex-direction: column;
     gap: 30px;
 }
 
-.benefit-card-icon {
+.benefit-item-icon {
     font-size: 2.5em;
     color: #faf2f2;
 }
 
-.benefit-card-title {
+.benefit-item-name {
     color: #faf2f2;
 }
 
-.benefit-card-description {
+.benefit-item-description {
     color: #faf2f2;
     line-height: 1.5;
     text-align: justify;
@@ -205,7 +206,7 @@ body {
     text-align: center;
 }
 
-.technologies-paragraph {
+.technologies-subtitle {
     font-size: 1.5em;
     line-height: 1.5;
     color: #faf2f2;
@@ -219,7 +220,7 @@ body {
     row-gap: 40px;
 }
 
-.technology-card {
+.tech-item {
     display: flex;
     align-items: flex-start;
     gap: 20px;
@@ -228,12 +229,12 @@ body {
     border-radius: 10px;
 }
 
-.technology-card-icon {
+.tech-item-icon {
     font-size: 2em;
     color: #faf2f2;
 }
 
-.technology-card-name {
+.tech-item-name {
     color: #faf2f2;
 }
 
@@ -247,7 +248,7 @@ body {
     background-color: #050612;
 }
 
-.testimonials-container {
+.testimonials-header {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -259,14 +260,14 @@ body {
     color: #faf2f2;
 }
 
-.testimonials-paragraph {
+.testimonials-subtitle {
     font-size: 1.5em;
     line-height: 1.5;
     color: #faf2f2;
     text-align: center;
 }
 
-.testimonial-card {
+.testimonial-item {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -275,23 +276,23 @@ body {
     border-radius: 10px;
 }
 
-.testimonial-card-header {
+.testimonial-item-header {
     display: flex;
     align-items: center;
     gap: 10px
 }
 
-.testimonial-card-image {
+.testimonial-item-image {
     width: 60px;
     height: 60px;
     border-radius: 50%;
 }
 
-.testimonial-card-name {
+.testimonial-item-name {
     color: #faf2f2;
 }
 
-.testimonial-card-feedback {
+.testimonial-item-description {
     color: #faf2f2;
     font-size: 1.2em;
     line-height: 1.5;
@@ -322,12 +323,12 @@ body {
     border-radius: 20px;
 }
 
-.buy-card-promotion {
+.buy-card-offer {
     display: flex;
     flex-direction: column;
 }
 
-.buy-card-alert {
+.buy-card-badge {
     background-color: #aa0202;
     padding: 10px 20px;
     color: #faf2f2;
@@ -338,7 +339,7 @@ body {
     margin-bottom: 35px;
 }
 
-.buy-card-text {
+.buy-card-old-price {
     font-size: 1.3em;
 }
 
@@ -364,6 +365,10 @@ body {
     padding: 15px 30px;
     border-radius: 10px;
     width: fit-content;
+}
+
+.buy-card-payment-method {
+    font-size: 1.1em;
 }
 
 @media (min-width: 768px) {
@@ -449,7 +454,7 @@ body {
     background-color: #faf2f2;
 }
 
-.footer-alert {
+.footer-badge {
     background-color: #aa0202;
     padding: 10px 20px;
     color: #faf2f2;
@@ -459,12 +464,12 @@ body {
     width: fit-content;
 }
 
-.footer-cta {
+.footer-headline {
     font-size: 2.5em;
     font-weight: 500;
 }
 
-.footer-text {
+.footer-description {
     font-size: 1.5em;
     line-height: 1.5;
 } 
@@ -488,20 +493,20 @@ body {
     }
 
     /* Main */
-    .main-section {
+    .section {
         padding: 40px;
     }
 
     /* Seção Início */
-    .intro-title {
+    .hero-title {
         font-size: 1.8em;
     }
 
-    .intro-paragraph {
+    .hero-subtitle {
         font-size: 1.2em;
     }
 
-    .intro-button-cta {
+    .hero-button {
         font-size: 1em;
         padding: 10px 20px;
     }
@@ -511,7 +516,7 @@ body {
         flex-direction: column;
     }
 
-    .about-image-product {
+    .about-image {
         width: 100%;
     }
 
@@ -519,7 +524,7 @@ body {
         font-size: 1.7em;
     }
 
-    .about-paragraph {
+    .about-text {
         font-size: 1em;
     }
 
@@ -532,16 +537,16 @@ body {
         flex-direction: column;
     }
 
-    .benefit-card {
+    .benefit-item {
         align-items: center;
         gap: 15px;
     }
 
-    .benefit-card-icon {
+    .benefit-item-icon {
         font-size: 2em;
     }
 
-    .benefit-card-title {
+    .benefit-item-name {
         font-size: 1.2em;
     }
 
@@ -550,7 +555,7 @@ body {
         font-size: 1.7em;
     }
 
-    .technologies-paragraph {
+    .technologies-subtitle {
         font-size: 1.1em;
     }
 
@@ -558,11 +563,11 @@ body {
         grid-template-columns: 1fr;
     }
 
-    .technology-card-icon {
+    .tech-item-icon {
         font-size: 1.5em;
     }
 
-    .technology-card-name {
+    .tech-item-name {
         font-size: 1.2em;
     }
 
@@ -575,25 +580,25 @@ body {
         font-size: 1.7em;
     }
 
-    .testimonials-paragraph {
+    .testimonials-subtitle {
         font-size: 1.1em;
     }
 
-    .testimonial-card {
+    .testimonial-item {
         align-items: center;
         padding: 20px;
     }
 
-    .testimonial-card-image {
+    .testimonial-item-image {
         width: 50px;
         height: 50px;
     }
 
-    .testimonial-card-name {
+    .testimonial-item-name {
         font-size: 1.1em;
     }
 
-    .testimonial-card-feedback {
+    .testimonial-item-description {
         font-size: 1em;
     }
 
@@ -607,14 +612,14 @@ body {
         padding: 20px;
     }
 
-    .buy-card-alert {
+    .buy-card-badge {
         padding: 5px 10px;
         font-size: 0.9em;
         margin-bottom: 20px;
         align-self: center;
     }
 
-    .buy-card-text {
+    .buy-card-old-price {
         font-size: 1em;
         text-align: center;
     }
@@ -628,6 +633,11 @@ body {
         font-size: 1em;
         padding: 10px 20px;
         border-radius: 8px;
+    }
+
+    .buy-card-payment-method {
+        font-size: 0.9em;
+        text-align: center;
     }
 
     /* Seção Contato */
@@ -656,11 +666,16 @@ body {
         padding: 30px 40px;
     }
 
-    .footer-cta {
+    .footer-badge {
+        padding: 5px 10px;
+        font-size: 0.9em;
+    }
+
+    .footer-headline {
         font-size: 1.8em;
     }
 
-    .footer-text {
+    .footer-description {
         font-size: 1.2em;
         text-align: center;
     }
