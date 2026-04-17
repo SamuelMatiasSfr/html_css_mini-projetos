@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloco de Notas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <i class="fa-solid fa-sticky-note header-icon"></i>
+        <span class="header-title">Bloco de Notas</span>
+    </header>
+
+    <main class="main">
+        <section class="section">
+            <h1 class="section-title">Nova Nota</h1>
+            
+            <form class="form">
+                <input class="form-input" id="input-titulo" type="text" placeholder="Título da nota" required>
+                <textarea class="form-textarea" id="textarea-mensagem" placeholder="Digite a mensagem da nota..." required></textarea>
+                <button class="form-button">Criar Nota</button> 
+            </form>
+        </section>
+
+        <section class="section">
+            <h1 class="section-title">Minhas Notas</h1>
+
+            <div class="notes-container">
+                <article class="note">
+                    <h2 class="note-title">Título da Nota</h2>
+                    <p class="note-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+                    <div class="note-buttons">
+                        <button class="note-button-update">Atualizar</button>
+                        <button class="note-button-delete">Excluir</button>
+                    </div>
+                </article>
+                
+                <article class="note">
+                    <h2 class="note-title">Título da Nota</h2>
+                    <p class="note-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+                    <div class="note-buttons">
+                        <button class="note-button-update">Atualizar</button>
+                        <button class="note-button-delete">Excluir</button>
+                    </div>
+                </article>
+
+                <article class="note">
+                    <h2 class="note-title">Título da Nota</h2>
+                    <p class="note-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+                    <div class="note-buttons">
+                        <button class="note-button-update">Atualizar</button>
+                        <button class="note-button-delete">Excluir</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <span class="footer-text">Desenvolvido por Samuel Matias</span>
+    </footer>
+</body>
+</html>
