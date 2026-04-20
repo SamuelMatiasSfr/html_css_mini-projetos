@@ -26,3 +26,25 @@ function adicionarNota(nota){
     const containerNotas = document.querySelector(".notes-container");
     containerNotas.appendChild(nota);
 }
+
+function processarFormulario(){
+    const formulario = document.querySelector(".form");
+
+    formulario.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        const titulo = document.getElementById("input-titulo").value;
+        const mensagem = document.getElementById("textarea-mensagem").value;
+        
+        const novaNota = criarNota(titulo, mensagem);
+        adicionarNota(novaNota);
+    
+        formulario.reset();
+    });
+}
+
+function main(){
+    processarFormulario();
+}
+
+main();
