@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Ingressos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <i class="fa-solid fa-ticket header-icon"></i>
+        <span class="header-title">Gerador de Ingressos</span>
+    </header>
+    <main class="main">
+        <h1 class="main-title">Sua jornada para o Evento de Codificação começa aqui!</h1>
+        <p class="main-description">Garanta já a sua vaga para o próximo grande evento.</p>
+
+        <form class="form">
+            <div class="form-group">
+                <label class="label" for="foto">Faça upload da sua foto</label>
+                <input class="input-file" type="file" id="foto" accept="jpeg, png" required>
+            </div>
+
+            <div class="form-group">
+                <label class="label" for="nome">Nome completo</label>
+                <input class="input-text" type="text" id="nome" placeholder="Digite seu nome completo" required>
+            </div>
+
+            <div class="form-group">
+                <label class="label" for="email">E-mail</label>
+                <input class="input-text" type="email" id="email" placeholder="Digite seu e-mail" required>
+            </div>
+
+            <div class="form-group">
+                <label class="label" for="github">Usuário no GitHub</label>
+                <input class="input-text" type="text" id="github" placeholder="Digite seu nome de usuário no GitHub" required>
+            </div>
+
+            <button class="form-button" type="submit">Gerar Meu Ingresso</button>
+        </form>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
