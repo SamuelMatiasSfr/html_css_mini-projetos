@@ -3,6 +3,7 @@ function criarNota(titulo, mensagem){
     const tituloNota = document.createElement("h2");
     const mensagemNota = document.createElement("p");
 
+    nota.classList.add("note");
     tituloNota.textContent = titulo;
     tituloNota.classList.add("note-title");
     mensagemNota.textContent = mensagem;
@@ -18,6 +19,8 @@ function criarNota(titulo, mensagem){
     botaoExcluir.addEventListener("click", () => {
         nota.remove();
     });
+
+    nota.appendChild(botaoExcluir);
 
     return nota;
 }
