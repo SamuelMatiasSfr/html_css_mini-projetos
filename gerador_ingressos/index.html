@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
+    <header class="header">
         <i class="fa-solid fa-ticket header-icon"></i>
         <span class="header-title">Gerador de Ingressos</span>
     </header>
@@ -19,22 +19,26 @@
         <form class="form">
             <div class="form-group">
                 <label class="label" for="foto">Faça upload da sua foto</label>
-                <input class="input-file" type="file" id="foto" accept="jpeg, png" required>
+                <label class="upload-box">
+                    <input class="input-file" type="file" id="foto" accept="jpeg, png" hidden required>
+                    <i class="fa-solid fa-cloud-arrow-up upload-icon"></i>
+                </label>
+                <small class="small-text">Formatos aceitos: JPG ou PNG</small>
             </div>
 
             <div class="form-group">
                 <label class="label" for="nome">Nome completo</label>
-                <input class="input-text" type="text" id="nome" placeholder="Digite seu nome completo" required>
+                <input class="input-text" type="text" id="nome" required>
             </div>
 
             <div class="form-group">
                 <label class="label" for="email">E-mail</label>
-                <input class="input-text" type="email" id="email" placeholder="Digite seu e-mail" required>
+                <input class="input-text" type="email" id="email" required>
             </div>
 
             <div class="form-group">
                 <label class="label" for="github">Usuário no GitHub</label>
-                <input class="input-text" type="text" id="github" placeholder="Digite seu nome de usuário no GitHub" required>
+                <input class="input-text" type="text" id="github" required>
             </div>
 
             <button class="form-button" type="submit">Gerar Meu Ingresso</button>

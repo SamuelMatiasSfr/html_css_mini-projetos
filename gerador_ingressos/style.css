@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to bottom, #110937 30%, #240655 70%);
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 40px;
+}
+
+.header-icon {
+    font-size: 32px;
+    color: #db706e;
+}
+
+.header-title{
+    font-size: 24px;
+    font-weight: bold;
+    color: #ecebeb;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 20px 60px;
+}
+
+.main-title {
+    color: #ecebeb;
+    text-align: center;
+}
+
+.main-description {
+    font-size: 18px;
+    color: #ecebeb;
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 40%;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.label {
+    color:#ecebeb;
+    font-size: 18px;
+}
+
+.small-text {
+    color: #ecebeb;
+    font-size: 12px;
+}
+
+.upload-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4f476e;
+    border-radius: 10px;
+    border: 1px dashed #8484a3;
+    padding: 30px;
+}
+
+.upload-box:hover {
+    border-color: #db706e;
+    cursor: pointer;
+}
+
+.upload-icon {
+    font-size: 24px;
+    color: #db706e;
+}
+
+.input-text {
+    background-color: #4f476e;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #8484a3;
+    color: #ecebeb;
+    font-size: 16px;
+}
+
+.input-text:focus {
+    outline: none;
+    border-color: #db706e;
+}
+
+.form-button {
+    background-color: #db706e;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    color: #110937;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+@media (min-width: 768px) {
+    .form-button:hover {
+        background-color: #dc8685;
+        cursor: pointer; 
+    }
+}
