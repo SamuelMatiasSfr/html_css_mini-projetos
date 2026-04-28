@@ -10,39 +10,68 @@
 <body>
     <header class="header">
         <i class="fa-solid fa-ticket header-icon"></i>
-        <span class="header-title">Gerador de Ingressos</span>
+        <span class="header-title">Coding Conf</span>
     </header>
     <main class="main">
-        <h1 class="main-title">Sua jornada para o Evento de Codificação começa aqui!</h1>
-        <p class="main-description">Garanta já a sua vaga para o próximo grande evento.</p>
+        <section class="section">
+            <h1 class="section-title">Sua jornada para o Evento de Codificação começa aqui!</h1>
+            <p class="section-text">Garanta já a sua vaga para o próximo grande evento.</p>
 
-        <form class="form">
-            <div class="form-group">
-                <label class="label" for="foto">Faça upload da sua foto</label>
-                <label class="upload-box">
-                    <input class="input-file" type="file" id="foto" accept="jpeg, png" hidden required>
-                    <i class="fa-solid fa-cloud-arrow-up upload-icon"></i>
-                </label>
-                <small class="small-text">Formatos aceitos: JPG ou PNG</small>
+            <form class="form">
+                <div class="form-group">
+                    <label class="label" for="foto">Faça upload da sua foto</label>
+                    <label class="upload-box">
+                        <input class="input-file" type="file" id="foto" accept="jpeg, png" hidden required>
+                        <i class="fa-solid fa-cloud-arrow-up upload-icon"></i>
+                    </label>
+                    <small class="small-text">Formatos aceitos: JPG ou PNG</small>
+                </div>
+
+                <div class="form-group">
+                    <label class="label" for="nome">Nome completo</label>
+                    <input class="input-text" type="text" id="nome" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="label" for="email">E-mail</label>
+                    <input class="input-text" type="email" id="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="label" for="github">Usuário no GitHub</label>
+                    <input class="input-text" type="text" id="github" required>
+                </div>
+
+                <button class="form-button" type="submit">Gerar Meu Ingresso</button>
+            </form>
+        </section>
+
+        <section class="section">
+            <h1 class="section-title">Parabéns, Samuel Matias! Seu ingresso está pronto.</h1>
+            <p class="section-text">Vamos enviar o seu ingresso para o email samuelmatias@example.com. Enviaremos atualizações conforme a data do evento se aproxima.</p>
+        
+            <div class="ticket">
+                <div class="ticket-left">
+                    <i class="fa-solid fa-user ticket-icon"></i>
+                    <h3>Coding Conf</h3>
+
+                    <div class="ticket-user">
+                        <img class="ticket-photo" src="" alt="Foto do Participante">
+                        <div class="ticket-info">
+                            <p class="ticket-name">Samuel Matias</p>
+                            <div class="ticket-github">
+                                <i class="fa-brands fa-github icon-github"></i>
+                                <span class="github-username">SamuelMatiasSfr</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ticket-right">
+                    <span>#12345</span>
+                </div>
             </div>
-
-            <div class="form-group">
-                <label class="label" for="nome">Nome completo</label>
-                <input class="input-text" type="text" id="nome" required>
-            </div>
-
-            <div class="form-group">
-                <label class="label" for="email">E-mail</label>
-                <input class="input-text" type="email" id="email" required>
-            </div>
-
-            <div class="form-group">
-                <label class="label" for="github">Usuário no GitHub</label>
-                <input class="input-text" type="text" id="github" required>
-            </div>
-
-            <button class="form-button" type="submit">Gerar Meu Ingresso</button>
-        </form>
+        </section>
     </main>
 
     <script src="script.js"></script>
