@@ -66,7 +66,6 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    width: 40%;
 }
 
 .form-group {
@@ -245,6 +244,24 @@ body {
     transform-origin: center;
 }
 
+@media (min-width: 1024px){
+    .form {
+        width: 50%;
+    }
+}
+
+@media (min-width: 482px) and (max-width: 1023px) {
+    .form {
+        width: 70%;
+    }
+}
+
+@media (max-width: 481px) {
+    .form {
+        width: 100%;
+    }
+}
+
 @media (max-width: 768px) {
     .header {
         padding: 40px 20px;
@@ -260,10 +277,6 @@ body {
 
     .section-text {
         font-size: 16px;
-    }
-
-    .form { 
-        width: 100%;
     }
 
     .label {
