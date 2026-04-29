@@ -13,7 +13,6 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
-    background: linear-gradient(to bottom, #110937 30%, #240655 70%);
 }
 
 .header {
@@ -22,6 +21,7 @@ body {
     align-items: center;
     gap: 20px;
     padding: 40px;
+    background: linear-gradient(to bottom, #240655 0%, #110937 100%);
 }
 
 .header-icon {
@@ -39,13 +39,14 @@ body {
     display: flex;
     flex-direction: column;
     gap: 80px;
+    background: linear-gradient(to bottom, #110937 0%, #240655 100%);
     padding: 20px 180px 80px 180px;
 }
 
 .section {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 30px;
     align-items: center;
 }
 
@@ -63,6 +64,7 @@ body {
 .form {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 20px;
     width: 40%;
 }
@@ -71,6 +73,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 8px;
+    width: 100%;
 }
 
 .label {
@@ -93,9 +96,11 @@ body {
     padding: 30px;
 }
 
-.upload-box:hover {
-    border-color: #db706e;
-    cursor: pointer;
+@media (min-width: 768px) {
+    .upload-box:hover {
+        border-color: #db706e;
+        cursor: pointer;
+    }
 }
 
 .upload-icon {
@@ -112,9 +117,11 @@ body {
     font-size: 16px;
 }
 
-.input-text:focus {
-    outline: none;
-    border-color: #db706e;
+@media (min-width: 768px) {
+    .input-text:focus {
+        outline: none;
+        border-color: #db706e;
+    }
 }
 
 .form-button {
@@ -125,6 +132,7 @@ body {
     color: #110937;
     font-size: 16px;
     font-weight: bold;
+    width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -206,7 +214,7 @@ body {
     gap: 5px;
 }
 
-.icon-github {
+.github-icon {
     font-size: 14px;
     color: #ecebeb;
 }
@@ -235,4 +243,99 @@ body {
     color: #ecebeb;
     transform: rotate(-90deg);
     transform-origin: center;
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 40px 20px;
+    }
+
+    .main {
+        padding: 20px;
+    }
+
+    .section-title {
+        font-size: 22px;
+    }
+
+    .section-text {
+        font-size: 16px;
+    }
+
+    .form { 
+        width: 100%;
+    }
+
+    .label {
+        font-size: 16px;
+    }
+
+    .ticket-left {
+        padding: 10px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        gap: 10px;
+        width: 180px;
+    }
+
+    .ticket-header {
+        gap: 5px;
+    }
+
+    .ticket-icon {
+        font-size: 16px;
+    }
+
+    .ticket-title {
+        font-size: 14px;
+    }
+
+    .ticket-date {
+        font-size: 10px;
+        margin-bottom: 10px;
+    }
+
+    .ticket-user {
+        gap: 5px;
+    }
+
+    .ticket-photo {
+        width: 30px;
+        height: 30px;
+    }
+
+    .ticket-info {
+        gap: 3px;
+    }
+
+    .ticket-name {
+        font-size: 14px;
+    }
+
+    .ticket-github {
+        gap: 3px;
+    }
+
+    .github-icon {
+        font-size: 12px;
+    }
+
+    .github-username {
+        font-size: 12px;
+        color: #ecebeb;
+    }
+
+    .ticket-right {
+        padding: 3px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
+    .ticket-code {
+        font-size: 12px;
+    }
 }
