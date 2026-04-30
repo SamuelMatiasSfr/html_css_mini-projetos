@@ -4,15 +4,9 @@ function gerarCodigo(){
 }
 
 function gerarIngresso(foto, nome, email, github){
-    const ticketSectionTitle = document.getElementById('section-ticket-title');
-    const ticketSectionText = document.getElementById('section-ticket-text');
-    
     const ticketFoto = document.getElementById('ticket-user-photo');
     const ticketName = document.getElementById('ticket-user-name');
     const ticketGithub = document.getElementById('ticket-github-username');
-
-    ticketSectionTitle.textContent = "Parabéns " + nome + "! Seu ingresso está pronto.";
-    ticketSectionText.innerHTML = "Vamos enviar o seu ingresso para o email <strong>" + email + "</strong>. Enviaremos atualizações conforme a data do evento se aproxima.";
     
     ticketFoto.src = URL.createObjectURL(foto);
     ticketName.textContent = nome;
@@ -20,12 +14,20 @@ function gerarIngresso(foto, nome, email, github){
 
     const ticketCode = document.getElementById('ticket-code');
     ticketCode.textContent = "#" + gerarCodigo();
+}
+
+function tornarSectionTicketVisivel(nome, email) {
+    const ticketSectionTitle = document.getElementById('section-ticket-title');
+    const ticketSectionText = document.getElementById('section-ticket-text');
+
+    ticketSectionTitle.textContent = "Parabéns " + nome + "! Seu ingresso está pronto.";
+    ticketSectionText.innerHTML = "Vamos enviar o seu ingresso para o email <strong>" + email + "</strong>. Enviaremos atualizações conforme a data do evento se aproxima.";
 
     const ticket = document.getElementById('section-ticket');
     ticket.style.display = 'flex';
 }
 
-function processaFormulario(){
+function processarFormulario(){
     const form = document.getElementById('form');
 
     form.addEventListener('submit', function(event){
@@ -42,14 +44,19 @@ function processaFormulario(){
             inputEmail.value.trim() &&
             inputGithub.value.trim()
         ) {
-            const foto = inputFoto.files[0];
-            gerarIngresso(foto, inputNome.value, inputEmail.value, inputGithub.value);
+            gerarIngresso(inputFoto.files[0], inputNome.value, inputEmail.value, inputGithub.value);
+            tornarSectionTicketVisivel(inputNome.value, inputEmail.value);
         }
+
+        inputFoto.value = '';
+        inputNome.value = '';
+        inputEmail.value = '';
+        inputGithub.value = '';
     });
 }
 
 function main(){
-    processaFormulario();
+    processarFormulario();
 }
 
 main();
