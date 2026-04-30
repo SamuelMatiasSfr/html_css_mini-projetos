@@ -68,24 +68,24 @@ body {
     gap: 20px;
 }
 
-.form-group {
+.form-field {
     display: flex;
     flex-direction: column;
     gap: 8px;
     width: 100%;
 }
 
-.label {
+.form-label {
     color:#ecebeb;
     font-size: 18px;
 }
 
-.small-text {
+.form-hint {
     color: #ecebeb;
     font-size: 12px;
 }
 
-.upload-box {
+.file-upload-area {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -96,7 +96,7 @@ body {
 }
 
 @media (min-width: 768px) {
-    .upload-box:hover {
+    .file-upload-area:hover {
         border-color: #db706e;
         cursor: pointer;
     }
@@ -107,7 +107,7 @@ body {
     color: #db706e;
 }
 
-.input-text {
+.form-input {
     background-color: #4f476e;
     padding: 10px;
     border-radius: 10px;
@@ -117,7 +117,7 @@ body {
 }
 
 @media (min-width: 768px) {
-    .input-text:focus {
+    .form-input:focus {
         outline: none;
         border-color: #db706e;
     }
@@ -141,11 +141,15 @@ body {
     }
 }
 
+.section-ticket {
+    display: none;
+}
+
 .ticket {
     display: flex;
 }
 
-.ticket-left {
+.ticket-info-container {
     background-color: #4f476e;
     padding: 20px;
     border-top-left-radius: 10px;
@@ -190,40 +194,40 @@ body {
     align-items: center;
 }
 
-.ticket-photo {
+.ticket-user-photo {
     width: 40px;
     height: 40px;
     border-radius: 50%;
     object-fit: cover;
 }
 
-.ticket-info {
+.ticket-user-details {
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
 
-.ticket-name {
+.ticket-user-name {
     color: #ecebeb;
 }
 
-.ticket-github {
+.ticket-user-github {
     display: flex;
     align-items: center;
     gap: 5px;
 }
 
-.github-icon {
+.ticket-github-icon {
     font-size: 14px;
     color: #ecebeb;
 }
 
-.github-username {
+.ticket-github-username {
     font-size: 14px;
     color: #ecebeb;
 }
 
-.ticket-right {
+.ticket-code-container {
     background-color: #4f476e;
     padding: 10px;
     display: flex;
@@ -279,11 +283,11 @@ body {
         font-size: 16px;
     }
 
-    .label {
+    .form-label {
         font-size: 16px;
     }
 
-    .ticket-left {
+    .ticket-info-container {
         padding: 10px;
         border-top-left-radius: 5px;
         border-bottom-left-radius: 5px;
@@ -314,33 +318,33 @@ body {
         gap: 5px;
     }
 
-    .ticket-photo {
+    .ticket-user-photo {
         width: 30px;
         height: 30px;
     }
 
-    .ticket-info {
+    .ticket-user-details {
         gap: 3px;
     }
 
-    .ticket-name {
+    .ticket-user-name {
         font-size: 14px;
     }
 
-    .ticket-github {
+    .ticket-user-github {
         gap: 3px;
     }
 
-    .github-icon {
+    .ticket-github-icon {
         font-size: 12px;
     }
 
-    .github-username {
+    .ticket-github-username {
         font-size: 12px;
         color: #ecebeb;
     }
 
-    .ticket-right {
+    .ticket-code-container {
         padding: 3px;
         border-top-right-radius: 5px;
         border-bottom-right-radius: 5px;

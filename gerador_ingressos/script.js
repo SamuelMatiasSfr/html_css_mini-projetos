@@ -4,12 +4,12 @@ function gerarCodigo(){
 }
 
 function gerarIngresso(foto, nome, email, github){
-    const ticketSectionTitle = document.getElementById('ticket-section-title');
-    const ticketSectionText = document.getElementById('ticket-section-text');
+    const ticketSectionTitle = document.getElementById('section-ticket-title');
+    const ticketSectionText = document.getElementById('section-ticket-text');
     
-    const ticketFoto = document.getElementById('ticket-photo');
-    const ticketName = document.getElementById('ticket-name');
-    const ticketGithub = document.getElementById('github-username');
+    const ticketFoto = document.getElementById('ticket-user-photo');
+    const ticketName = document.getElementById('ticket-user-name');
+    const ticketGithub = document.getElementById('ticket-github-username');
 
     ticketSectionTitle.textContent = "Parabéns " + nome + "! Seu ingresso está pronto.";
     ticketSectionText.innerHTML = "Vamos enviar o seu ingresso para o email <strong>" + email + "</strong>. Enviaremos atualizações conforme a data do evento se aproxima.";
@@ -21,20 +21,20 @@ function gerarIngresso(foto, nome, email, github){
     const ticketCode = document.getElementById('ticket-code');
     ticketCode.textContent = "#" + gerarCodigo();
 
-    const ticket = document.getElementById('ticket-section');
-    ticket.style.display = 'block';
+    const ticket = document.getElementById('section-ticket');
+    ticket.style.display = 'flex';
 }
 
 function processaFormulario(){
-    const botaoForm = document.getElementById('button-submit');
+    const form = document.getElementById('form');
 
-    botaoForm.addEventListener('click', function(event){
+    form.addEventListener('submit', function(event){
         event.preventDefault();
 
         const inputFoto = document.getElementById('foto');
         const inputNome = document.getElementById('nome');
         const inputEmail = document.getElementById('email');
-        const inputGithub = document.getElementById('github'); 
+        const inputGithub = document.getElementById('username-github'); 
 
         if(
             inputFoto.value &&

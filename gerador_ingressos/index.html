@@ -12,46 +12,47 @@
         <i class="fa-solid fa-ticket header-icon"></i>
         <span class="header-title">Coding Conf</span>
     </header>
+
     <main class="main">
-        <section class="section">
+        <section class="section section-form">
             <h1 class="section-title">Sua jornada para o Encoding Event começa aqui!</h1>
             <p class="section-text">Garanta já a sua vaga para o próximo grande evento.</p>
 
-            <form class="form" action="" method="post">
-                <div class="form-group">
-                    <label class="label" for="foto">Faça upload da sua foto</label>
-                    <label class="upload-box">
-                        <input class="input-file" type="file" id="foto" accept="jpeg, png" hidden required>
+            <form class="form" id="form" action="" method="post">
+                <div class="form-field">
+                    <label class="form-label" for="foto">Faça upload da sua foto</label>
+                    <label class="file-upload-area">
+                        <input class="file-input" type="file" id="foto" accept="jpeg, png" hidden required>
                         <i class="fa-solid fa-cloud-arrow-up upload-icon"></i>
                     </label>
-                    <small class="small-text">Formatos aceitos: JPG ou PNG</small>
+                    <small class="form-hint">Formatos aceitos: JPG ou PNG</small>
                 </div>
 
-                <div class="form-group">
-                    <label class="label" for="name">Nome completo</label>
-                    <input class="input-text" type="text" id="nome" required>
+                <div class="form-field">
+                    <label class="form-label" for="nome">Nome completo</label>
+                    <input class="form-input" type="text" id="nome" required>
                 </div>
 
-                <div class="form-group">
-                    <label class="label" for="email">E-mail</label>
-                    <input class="input-text" type="email" id="email" required>
+                <div class="form-field">
+                    <label class="form-label" for="email">E-mail</label>
+                    <input class="form-input" type="email" id="email" required>
                 </div>
 
-                <div class="form-group">
-                    <label class="label" for="github">Usuário no GitHub</label>
-                    <input class="input-text" type="text" id="github" required>
+                <div class="form-field">
+                    <label class="form-label" for="username-github">Usuário no GitHub</label>
+                    <input class="form-input" type="text" id="username-github" required>
                 </div>
 
                 <button class="form-button" id="button-submit" type="submit">Gerar Meu Ingresso</button>
             </form>
         </section>
 
-        <section class="section" id="ticket-section" style="display: none;">
-            <h1 class="section-title" id="ticket-section-title">Parabéns Samuel Matias! Seu ingresso está pronto.</h1>
-            <p class="section-text" id="ticket-section-text">Vamos enviar o seu ingresso para o email <strong>samuelmatias@example.com</strong>. Enviaremos atualizações conforme a data do evento se aproxima.</p>
+        <section class="section section-ticket" id="section-ticket">
+            <h1 class="section-title" id="section-ticket-title">Parabéns Samuel Matias! Seu ingresso está pronto.</h1>
+            <p class="section-text" id="section-ticket-text">Vamos enviar o seu ingresso para o email <strong>samuelmatias@example.com</strong>. Enviaremos atualizações conforme a data do evento se aproxima.</p>
         
             <div class="ticket">
-                <div class="ticket-left">
+                <div class="ticket-info-container">
                     <div class="ticket-header">
                         <i class="fa-solid fa-ticket ticket-icon"></i>
                         <h3 class="ticket-title">Coding Conf</h3>
@@ -60,18 +61,18 @@
                     <span class="ticket-date">28 de Março de 2026</span>
 
                     <div class="ticket-user">
-                        <img class="ticket-photo" id="ticket-photo" src="" alt="Foto do Participante">
-                        <div class="ticket-info">
-                            <p class="ticket-name" id="ticket-name"></p>
-                            <div class="ticket-github">
-                                <i class="fa-brands fa-github github-icon"></i>
-                                <span class="github-username" id="github-username"></span>
+                        <img class="ticket-user-photo" id="ticket-user-photo" src="" alt="Foto do Participante">
+                        <div class="ticket-user-details">
+                            <p class="ticket-user-name" id="ticket-user-name"></p>
+                            <div class="ticket-user-github">
+                                <i class="fa-brands fa-github ticket-github-icon"></i>
+                                <span class="ticket-github-username" id="ticket-github-username"></span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="ticket-right">
+                <div class="ticket-code-container">
                     <span class="ticket-code" id="ticket-code">#12345</span>
                 </div>
             </div>
