@@ -3,7 +3,7 @@ function gerarCodigo(){
     return codigo;
 }
 
-function gerarIngresso(foto, nome, email, github){
+function gerarIngresso(foto, nome, github){
     const ticketFoto = document.getElementById('ticket-user-photo');
     const ticketName = document.getElementById('ticket-user-name');
     const ticketGithub = document.getElementById('ticket-github-username');
@@ -44,7 +44,7 @@ function processarFormulario(){
             inputEmail.value.trim() &&
             inputGithub.value.trim()
         ) {
-            gerarIngresso(inputFoto.files[0], inputNome.value, inputEmail.value, inputGithub.value);
+            gerarIngresso(inputFoto.files[0], inputNome.value, inputGithub.value);
             tornarSectionTicketVisivel(inputNome.value, inputEmail.value);
         }
 
