@@ -52,7 +52,8 @@ body {
 
 .new-article-image {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
 }
 
 .new-article-content {
@@ -98,7 +99,6 @@ body {
     padding: 30px 20px;
     background-color: #111533;
     width: 30%;
-    height: fit-content;
 }
 
 .new-aside-title {
@@ -135,28 +135,27 @@ body {
 }
 
 .popular-news {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
 
 .popular-news-article {
     display: flex;
-    gap: 10px;
-    height: fit-content;
+    gap: 15px;
 }
 
 .popular-news-article-image {
-    width: 100px;
-    height: 120px;
+    width: 30%;
+    height: 100%;
     object-fit: cover;
 }
 
 .popular-news-article-content {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 10px;
+    width: 70%;
 }
 
 .popular-news-article-position {
@@ -176,7 +175,7 @@ body {
     color: #333;
 }
 
-@media (min-width: 768px){
+@media (min-width: 1024px){
     .header-nav a:hover {
         background-color: #e7e6e6;
         cursor: pointer;
@@ -190,5 +189,93 @@ body {
     .new-aside-item-title:hover {
         color: #333;
         cursor: pointer;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 938px){
+    .popular-news {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    body {
+        padding: 30px;
+    }
+
+    .new-article {
+        width: 60%;
+    }
+
+    .new-article-content {
+        flex-direction: column;
+    }
+
+    .new-article-title {
+        width: 100%;
+        text-align: center;
+    }
+
+    .new-article-details {
+        width: 100%;
+        align-items: center;
+    }
+
+    .new-aside {
+        width: 40%;
+    }
+
+    .popular-news {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 20px;
+    }
+
+    .header-nav {
+        display: none;
+    }
+
+    .section-new {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .new-article {
+        width: 100%;
+    }
+
+    .new-article-content {
+        flex-direction: column;
+    }
+
+    .new-article-title {
+        width: 100%;
+        text-align: center;
+    }
+
+    .new-article-details {
+        width: 100%;
+        align-items: center;
+    }
+
+    .new-aside {
+        width: 100%;
+    }
+
+    .section-popular {
+        gap: 30px;
+    }
+
+    .popular-title {
+        text-align: center;
+    }
+
+    .popular-news {
+        grid-template-columns: 1fr;
+        gap: 30px;
     }
 }
