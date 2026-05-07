@@ -22,6 +22,12 @@ body {
     align-items: center;
 }
 
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .header-title {
     font-size: 48px;
 }
@@ -33,9 +39,10 @@ body {
 
 .icon-close {
     position: absolute;
-    top: -5px;
-    right: -5px;
+    top: 0px;
+    right: 0px;
     font-size: 25px; 
+    opacity: 0.7;
     display: none;
 }
 
@@ -268,11 +275,21 @@ body {
         padding: 20px;
     }
 
+    .header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .header-content {
+        width: 100%;
+    }
+
     .nav {
         position: relative;
         display: none;
         background-color: #cecece;
         flex-direction: column;
+        width: 100%;
     }
 
     .icon-menu {
