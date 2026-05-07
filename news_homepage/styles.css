@@ -22,8 +22,21 @@ body {
     align-items: center;
 }
 
-.header span {
+.header-title {
     font-size: 48px;
+}
+
+.icon-menu {
+    font-size: 40px;
+    display: none;
+}
+
+.icon-close {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    font-size: 25px; 
+    display: none;
 }
 
 .nav {
@@ -205,7 +218,7 @@ body {
 }
 
 .popular-item h3:hover {
-    color: #333;
+    color: #cecece;
     cursor: pointer;
 }
 
@@ -256,12 +269,18 @@ body {
     }
 
     .nav {
+        position: relative;
         display: none;
+        background-color: #cecece;
         flex-direction: column;
     }
 
+    .icon-menu {
+        display: flex;
+    }
+
     .nav a {
-        padding: 10px 10px;
+        padding: 10px 15px;
     }
 
     .section-new {

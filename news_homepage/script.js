@@ -1,3 +1,27 @@
+function mostrarMenu() {
+    const nav = document.querySelector('.nav');
+    const menuIcon = document.querySelector('.icon-menu');
+    const closeIcon = document.querySelector('.icon-close');
+
+    menuIcon.addEventListener('click', function() {
+        nav.style.display = 'flex';
+        menuIcon.style.display = 'none';
+        closeIcon.style.display = 'flex';
+    });
+}
+
+function fecharMenu() {
+    const nav = document.querySelector('.nav');
+    const menuIcon = document.querySelector('.icon-menu');
+    const closeIcon = document.querySelector('.icon-close');
+
+    closeIcon.addEventListener('click', function() {
+        nav.style.display = 'none';
+        menuIcon.style.display = 'flex';
+        closeIcon.style.display = 'none';
+    });
+}
+
 function preencherNoticia(imagem, titulo, resumo) {
     const imagemNoticia = document.getElementById('new-article-image');
     const tituloNoticia = document.getElementById('new-article-title');
@@ -22,6 +46,8 @@ function adicionarEventoDePegarDadosDaNoticia() {
 }
 
 function main() {
+    fecharMenu();
+    mostrarMenu();
     adicionarEventoDePegarDadosDaNoticia();
 }
 
