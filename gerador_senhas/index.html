@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Senhas</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1>Gerador de Senhas</h1>
+
+        <div class="caixa-senha">
+            <p id="senha-gerada">#########</p>
+            <span class="material-symbols-outlined" id="copiar-senha">content_copy</span>
+        </div>
+
+        <div class="controles">
+            <div class="info-tamanho">
+                <label class="label" for="tamanho-senha">Tamanho da Senha</label>
+                <p id="tamanho-senha-valor">0</p>
+            </div>
+            <input type="range" class="input-range" id="tamanho-senha" min="5" max="20" value="0">
+
+            <div class="checkboxes">
+                <label class="label"><input type="checkbox" class="input-checkbox" id="incluir-maiusculas"> Incluir Letras Maiúsculas</label>
+                <label class="label"><input type="checkbox" class="input-checkbox" id="incluir-minusculas"> Incluir Letras Minúsculas</label>
+                <label class="label"><input type="checkbox" class="input-checkbox" id="incluir-numeros"> Incluir Números</label>
+                <label class="label"><input type="checkbox" class="input-checkbox" id="incluir-simbolos"> Incluir Símbolos</label>
+            </div>
+        </div>
+
+        <div class="feedback">
+            <p class="feedback-text">FORÇA</p>
+            <div class="nivel-seguranca">
+                <p class="nivel-seguranca-text">FRACO</p>
+                <div class="barra-seguranca"></div>
+                <div class="barra-seguranca"></div>
+                <div class="barra-seguranca"></div>
+            </div>
+        </div>
+
+        <button id="gerar-senha">Gerar Senha<span class="material-symbols-outlined">arrow_forward</span></button>
+    </main>
+</body>
+</html>
