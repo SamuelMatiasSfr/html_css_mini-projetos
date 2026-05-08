@@ -39,28 +39,26 @@ function atualizarTamanhoSenha() {
     });
 }
 
-function atualizarNivelSeguranca(numCheckboxesMarcadas) {
-    const textoNivelSeguranca = document.getElementById("texto-nivel-seguranca");
+function calcularPontosSeguranca(tamanho, numCheckboxesMarcadas) {
+    let pontos = 0;
 
-    let codigoCorBarra = "";
+    if(tamanho === 5) pontos += 1;
+    if(tamanho === 10) pontos += 2;
+    if(tamanho === 15) pontos += 3;
+    if(tamanho === 20) pontos += 4;
 
-    if(numCheckboxesMarcadas === 1) {
-        textoNivelSeguranca.textContent = "Muito Baixo";
-        codigoCorBarra = "#d9534f";
-    } else if (numCheckboxesMarcadas === 2) {
-        textoNivelSeguranca.textContent = "Baixo";
-        codigoCorBarra = "#f0ad4e";
-    } else if (numCheckboxesMarcadas === 3) {
-        textoNivelSeguranca.textContent = "Médio";
-        codigoCorBarra = "#facb68";
-    } else if (numCheckboxesMarcadas === 4) {
-        textoNivelSeguranca.textContent = "Alto";
-        codigoCorBarra = "#6c996f";
-    }
+    if(numCheckboxesMarcadas === 1) pontos += 1;
+    if(numCheckboxesMarcadas === 2) pontos += 2;
+    if(numCheckboxesMarcadas === 3) pontos += 3;
+    if(numCheckboxesMarcadas === 4) pontos += 4;
 
+    return pontos;
+}
+
+function pintarBarrasSeguranca(numBarras, codigoCorBarra) {
     const barrasSeguranca = document.querySelectorAll(".barra-seguranca");
     barrasSeguranca.forEach((barra, index) => {
-        if(index < numCheckboxesMarcadas) {
+        if(index < numBarras) {
             barra.style.backgroundColor = codigoCorBarra;
         } else {
             barra.style.backgroundColor = "#14131b";
@@ -68,11 +66,38 @@ function atualizarNivelSeguranca(numCheckboxesMarcadas) {
     });
 }
 
-function gerarSenha() {
-    const botaoGerarSenha = document.getElementById("gerar-senha");
-    botaoGerarSenha.addEventListener("click", () => {
-        //const tamanho = Number(document.getElementById("texto-tamanho-senha").textContent);
+function atualizarNivelSeguranca(tamanho, numCheckboxesMarcadas) {
+    const pontos = calcularPontosSeguranca(tamanho, numCheckboxesMarcadas);
+    
+    const textoNivelSeguranca = document.getElementById("texto-nivel-seguranca");
+    let numBarras = 0;
+    let codigoCorBarra = "";
 
+    if(pontos >= 0 && pontos <= 2) {
+        textoNivelSeguranca.textContent = "Muito Baixo";
+        numBarras = 1;
+        codigoCorBarra = "#d9534f";
+    } else if (pontos >= 3 && pontos <= 4) {
+        textoNivelSeguranca.textContent = "Baixo";
+        numBarras = 2;
+        codigoCorBarra = "#f0ad4e";
+    } else if (pontos >= 5 && pontos <= 6) {
+        textoNivelSeguranca.textContent = "Médio";
+        numBarras = 3;
+        codigoCorBarra = "#facb68";
+    } else if (pontos >= 7 && pontos <= 8) {
+        textoNivelSeguranca.textContent = "Alto";
+        numBarras = 4;
+        codigoCorBarra = "#6c996f";
+    }
+
+    pintarBarrasSeguranca(numBarras, codigoCorBarra);
+}
+
+function funcao() {
+    const botaoGerarSenha = document.getElementById("gerar-senha");
+
+    botaoGerarSenha.addEventListener("click", () => {
         const incluirMaiusculas = document.getElementById("incluir-maiusculas").checked;
         const incluirMinusculas = document.getElementById("incluir-minusculas").checked;
         const incluirNumeros = document.getElementById("incluir-numeros").checked;
@@ -84,14 +109,16 @@ function gerarSenha() {
         if(incluirNumeros) numCheckboxesMarcadas++;
         if(incluirSimbolos) numCheckboxesMarcadas++;
 
-        atualizarNivelSeguranca(numCheckboxesMarcadas);
+        const tamanho = Number(document.getElementById("texto-tamanho-senha").textContent);
+
+        atualizarNivelSeguranca(tamanho, numCheckboxesMarcadas);
     });
 }
 
 function main() {
     copiarSenha();
     atualizarTamanhoSenha();
-    gerarSenha();
+    funcao();
 }
 
 main();
