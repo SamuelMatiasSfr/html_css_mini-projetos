@@ -1,3 +1,13 @@
+function copiarSenha() {
+    const iconeCopiar = document.getElementById("icone-copiar");
+    const textoSenhaGerada = document.getElementById("senha-gerada");
+
+    iconeCopiar.addEventListener("click", () => {
+        const senha = textoSenhaGerada.textContent;
+        navigator.clipboard.writeText(senha);
+    });
+}
+
 function atualizarTamanhoSenha() {
     const barraTamanhoSenha = document.getElementById("barra-tamanho-senha");
     const textoTamanhoSenha = document.getElementById("texto-tamanho-senha");
@@ -31,6 +41,7 @@ function atualizarTamanhoSenha() {
 
 function main() {
     atualizarTamanhoSenha();
+    copiarSenha();
 }
 
 main();
