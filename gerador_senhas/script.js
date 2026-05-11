@@ -94,6 +94,76 @@ function atualizarNivelSeguranca(tamanho, numCheckboxesMarcadas) {
     pintarBarrasSeguranca(numBarras, codigoCorBarra);
 }
 
+function calcularPorcentagemTiposCaracteres(numCheckboxesMarcadas) {
+    return 1 / numCheckboxesMarcadas;
+}
+
+function embaralharSenha(senha) {
+    for(let j=0; j<5; j++) {
+        for(let i = senha.length-1; i >= 0; i--) {
+            const indiceNovo = Math.floor(Math.random() * senha.length);
+            const auxiliar = senha[indiceNovo];
+            senha[indiceNovo] = senha[i];
+            senha[i] = auxiliar;
+        }
+    }
+}
+
+// função que gera a senha aleatória
+function gerarSenha(tamanho, numCheckboxesMarcadas, incluirMaiusculas, incluirMinusculas, incluirNumeros, incluirSimbolos) {
+    const porcentagemTipoCaractere = 1 / numCheckboxesMarcadas;
+
+    const caracteres = {
+        maiusculas: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+        minusculas: "abcdefghijklmnopqrstuvwxyz",
+        numeros: "0123456789",
+        simbolos: "!@#$%^&*()_+~`|}{[]:;?><,./-="
+    };
+
+    const senha = [];
+
+    if(incluirMaiusculas) {
+        const quantidadeCaracteres = Math.round(tamanho * porcentagemTipoCaractere);
+        for(let i=0; i< quantidadeCaracteres; i++) {
+            const indice = Math.floor(Math.random() * caracteres.maiusculas.length);
+            senha.push(caracteres.maiusculas[indice]);
+        }
+    }
+
+    if(incluirMinusculas) {
+        const quantidadeCaracteres = Math.round(tamanho * porcentagemTipoCaractere);
+        for(let i=0; i< quantidadeCaracteres; i++) {
+            const indice = Math.floor(Math.random() * caracteres.minusculas.length);
+            senha.push(caracteres.minusculas[indice]);
+        }
+    }
+
+    if(incluirNumeros) {
+        const quantidadeCaracteres = Math.round(tamanho * porcentagemTipoCaractere);
+        for(let i=0; i< quantidadeCaracteres; i++) {
+            const indice = Math.floor(Math.random() * caracteres.numeros.length);
+            senha.push(caracteres.numeros[indice]);
+        }
+    }
+
+    if(incluirSimbolos) {
+        const quantidadeCaracteres = Math.round(tamanho * porcentagemTipoCaractere);
+        for(let i=0; i< quantidadeCaracteres; i++) {
+            const indice = Math.floor(Math.random() * caracteres.simbolos.length);
+            senha.push(caracteres.simbolos[indice]);
+        }
+    }
+
+    embaralharSenha(senha);
+
+    return senha;
+}
+
+function exibirSenha(senha){
+    const textoSenhaGerada = document.getElementById("senha-gerada");
+    textoSenhaGerada.textContent = senha.join("");
+}
+
 function funcao() {
     const botaoGerarSenha = document.getElementById("gerar-senha");
 
@@ -111,6 +181,8 @@ function funcao() {
 
         const tamanho = Number(document.getElementById("texto-tamanho-senha").textContent);
 
+        const senha = gerarSenha(tamanho, numCheckboxesMarcadas, incluirMaiusculas, incluirMinusculas, incluirNumeros, incluirSimbolos);
+        exibirSenha(senha);
         atualizarNivelSeguranca(tamanho, numCheckboxesMarcadas);
     });
 }
