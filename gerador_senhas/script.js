@@ -1,9 +1,9 @@
 function copiarSenha() {
     const iconeCopiar = document.getElementById("icone-copiar");
-    const textoSenhaGerada = document.getElementById("senha-gerada");
+    const textoSenha = document.getElementById("texto-senha");
 
     iconeCopiar.addEventListener("click", () => {
-        const senha = textoSenhaGerada.textContent;
+        const senha = textoSenha.textContent;
         navigator.clipboard.writeText(senha);
     });
 }
@@ -17,20 +17,20 @@ function atualizarTamanhoSenha() {
         let porcentagem = (barraTamanhoSenha.value / 20) * 100;
 
         if (tamanho == 0) {
+            tamanho = 0;
             porcentagem = 0;
-            tamanho = 0
         } else if (tamanho > 0 && tamanho <= 5) {
-            porcentagem = 25;
             tamanho = 5;
+            porcentagem = 25;
         } else if (tamanho > 5 && tamanho <= 10) {
-            porcentagem = 50;
             tamanho = 10;
+            porcentagem = 50;
         } else if (tamanho > 10 && tamanho <= 15) {
-            porcentagem = 75;
             tamanho = 15;
+            porcentagem = 75;
         } else if (tamanho > 15) {
-            porcentagem = 100;
             tamanho = 20;
+            porcentagem = 100;
         }
         
         textoTamanhoSenha.textContent = tamanho;
@@ -39,7 +39,7 @@ function atualizarTamanhoSenha() {
     });
 }
 
-function calcularPontosSeguranca(tamanho, numCheckboxesMarcadas) {
+function calcularPontosSeguranca(tamanho, quantidadeInclusoes) {
     let pontos = 0;
 
     if(tamanho === 5) pontos += 1;
@@ -47,18 +47,18 @@ function calcularPontosSeguranca(tamanho, numCheckboxesMarcadas) {
     if(tamanho === 15) pontos += 3;
     if(tamanho === 20) pontos += 4;
 
-    if(numCheckboxesMarcadas === 1) pontos += 1;
-    if(numCheckboxesMarcadas === 2) pontos += 2;
-    if(numCheckboxesMarcadas === 3) pontos += 3;
-    if(numCheckboxesMarcadas === 4) pontos += 4;
+    if(quantidadeInclusoes === 1) pontos += 1;
+    if(quantidadeInclusoes === 2) pontos += 2;
+    if(quantidadeInclusoes === 3) pontos += 3;
+    if(quantidadeInclusoes === 4) pontos += 4;
 
     return pontos;
 }
 
-function pintarBarrasSeguranca(numBarras, codigoCorBarra) {
-    const barrasSeguranca = document.querySelectorAll(".barra-seguranca");
+function pintarBarrasSeguranca(quantidadeBarras, codigoCorBarra) {
+    const barrasSeguranca = document.querySelectorAll(".nivel-seguranca-barra");
     barrasSeguranca.forEach((barra, index) => {
-        if(index < numBarras) {
+        if(index < quantidadeBarras) {
             barra.style.backgroundColor = codigoCorBarra;
         } else {
             barra.style.backgroundColor = "#14131b";
@@ -66,40 +66,36 @@ function pintarBarrasSeguranca(numBarras, codigoCorBarra) {
     });
 }
 
-function atualizarNivelSeguranca(tamanho, numCheckboxesMarcadas) {
-    const pontos = calcularPontosSeguranca(tamanho, numCheckboxesMarcadas);
+function atualizarNivelSeguranca(tamanho, quantidadeInclusoes) {
+    const pontos = calcularPontosSeguranca(tamanho, quantidadeInclusoes);
     
     const textoNivelSeguranca = document.getElementById("texto-nivel-seguranca");
-    let numBarras = 0;
+    let quantidadeBarras = 0;
     let codigoCorBarra = "";
 
     if(pontos >= 0 && pontos <= 2) {
         textoNivelSeguranca.textContent = "Muito Baixo";
-        numBarras = 1;
+        quantidadeBarras = 1;
         codigoCorBarra = "#d9534f";
     } else if (pontos >= 3 && pontos <= 4) {
         textoNivelSeguranca.textContent = "Baixo";
-        numBarras = 2;
+        quantidadeBarras = 2;
         codigoCorBarra = "#f0ad4e";
     } else if (pontos >= 5 && pontos <= 6) {
         textoNivelSeguranca.textContent = "Médio";
-        numBarras = 3;
+        quantidadeBarras = 3;
         codigoCorBarra = "#facb68";
     } else if (pontos >= 7 && pontos <= 8) {
         textoNivelSeguranca.textContent = "Alto";
-        numBarras = 4;
+        quantidadeBarras = 4;
         codigoCorBarra = "#6c996f";
     }
 
-    pintarBarrasSeguranca(numBarras, codigoCorBarra);
-}
-
-function calcularPorcentagemTiposCaracteres(numCheckboxesMarcadas) {
-    return 1 / numCheckboxesMarcadas;
+    pintarBarrasSeguranca(quantidadeBarras, codigoCorBarra);
 }
 
 function embaralharSenha(senha) {
-    for(let j=0; j<5; j++) {
+    for(let j=0; j<10; j++) {
         for(let i = senha.length-1; i >= 0; i--) {
             const indiceNovo = Math.floor(Math.random() * senha.length);
             const auxiliar = senha[indiceNovo];
@@ -109,9 +105,9 @@ function embaralharSenha(senha) {
     }
 }
 
-// função que gera a senha aleatória
-function gerarSenha(tamanho, numCheckboxesMarcadas, incluirMaiusculas, incluirMinusculas, incluirNumeros, incluirSimbolos) {
-    const porcentagemTipoCaractere = 1 / numCheckboxesMarcadas;
+function gerarSenha(tamanho, quantidadeInclusoes, incluirMaiusculas, incluirMinusculas, incluirNumeros, incluirSimbolos) {
+    const proporcaoTipoCaractere = 1 / quantidadeInclusoes;
+    const quantidadeCaracteres = Math.round(tamanho * proporcaoTipoCaractere);
 
     const caracteres = {
         maiusculas: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
@@ -123,32 +119,28 @@ function gerarSenha(tamanho, numCheckboxesMarcadas, incluirMaiusculas, incluirMi
     const senha = [];
 
     if(incluirMaiusculas) {
-        const quantidadeCaracteres = Math.round(tamanho * porcentagemTipoCaractere);
-        for(let i=0; i< quantidadeCaracteres; i++) {
+        for(let i=0; i<quantidadeCaracteres; i++) {
             const indice = Math.floor(Math.random() * caracteres.maiusculas.length);
             senha.push(caracteres.maiusculas[indice]);
         }
     }
 
     if(incluirMinusculas) {
-        const quantidadeCaracteres = Math.round(tamanho * porcentagemTipoCaractere);
-        for(let i=0; i< quantidadeCaracteres; i++) {
+        for(let i=0; i<quantidadeCaracteres; i++) {
             const indice = Math.floor(Math.random() * caracteres.minusculas.length);
             senha.push(caracteres.minusculas[indice]);
         }
     }
 
     if(incluirNumeros) {
-        const quantidadeCaracteres = Math.round(tamanho * porcentagemTipoCaractere);
-        for(let i=0; i< quantidadeCaracteres; i++) {
+        for(let i=0; i<quantidadeCaracteres; i++) {
             const indice = Math.floor(Math.random() * caracteres.numeros.length);
             senha.push(caracteres.numeros[indice]);
         }
     }
 
     if(incluirSimbolos) {
-        const quantidadeCaracteres = Math.round(tamanho * porcentagemTipoCaractere);
-        for(let i=0; i< quantidadeCaracteres; i++) {
+        for(let i=0; i<quantidadeCaracteres; i++) {
             const indice = Math.floor(Math.random() * caracteres.simbolos.length);
             senha.push(caracteres.simbolos[indice]);
         }
@@ -160,12 +152,12 @@ function gerarSenha(tamanho, numCheckboxesMarcadas, incluirMaiusculas, incluirMi
 }
 
 function exibirSenha(senha){
-    const textoSenhaGerada = document.getElementById("senha-gerada");
-    textoSenhaGerada.textContent = senha.join("");
+    const textoSenha = document.getElementById("texto-senha");
+    textoSenha.textContent = senha.join("");
 }
 
-function funcao() {
-    const botaoGerarSenha = document.getElementById("gerar-senha");
+function configurarGeracaoSenha() {
+    const botaoGerarSenha = document.getElementById("botao-gerar-senha");
 
     botaoGerarSenha.addEventListener("click", () => {
         const incluirMaiusculas = document.getElementById("incluir-maiusculas").checked;
@@ -173,24 +165,24 @@ function funcao() {
         const incluirNumeros = document.getElementById("incluir-numeros").checked;
         const incluirSimbolos = document.getElementById("incluir-simbolos").checked;
 
-        let numCheckboxesMarcadas = 0;
-        if(incluirMaiusculas) numCheckboxesMarcadas++;
-        if(incluirMinusculas) numCheckboxesMarcadas++;
-        if(incluirNumeros) numCheckboxesMarcadas++;
-        if(incluirSimbolos) numCheckboxesMarcadas++;
+        let quantidadeInclusoes  = 0;
+        if(incluirMaiusculas) quantidadeInclusoes ++;
+        if(incluirMinusculas) quantidadeInclusoes ++;
+        if(incluirNumeros) quantidadeInclusoes ++;
+        if(incluirSimbolos) quantidadeInclusoes ++;
 
         const tamanho = Number(document.getElementById("texto-tamanho-senha").textContent);
 
-        const senha = gerarSenha(tamanho, numCheckboxesMarcadas, incluirMaiusculas, incluirMinusculas, incluirNumeros, incluirSimbolos);
+        const senha = gerarSenha(tamanho, quantidadeInclusoes, incluirMaiusculas, incluirMinusculas, incluirNumeros, incluirSimbolos);
         exibirSenha(senha);
-        atualizarNivelSeguranca(tamanho, numCheckboxesMarcadas);
+        atualizarNivelSeguranca(tamanho, quantidadeInclusoes);
     });
 }
 
 function main() {
     copiarSenha();
     atualizarTamanhoSenha();
-    funcao();
+    configurarGeracaoSenha();
 }
 
 main();

@@ -5,50 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerador de Senhas</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+NZ+Basic:wght@100..400&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main>
-        <h1>Gerador de Senhas</h1>
+    <main class="main">
+        <h1 class="main-titulo">Gerador de Senhas</h1>
 
-        <div class="caixa-senha">
-            <p id="senha-gerada">pY789###Aa</p>
+        <div class="exibicao-senha">
+            <p id="texto-senha">pY789###Aa</p>
             <span class="material-symbols-outlined" id="icone-copiar">content_copy</span>
         </div>
 
-        <div class="gerador-senhas">
+        <div class="painel-gerador">
             <div class="controles">
-                <div class="info-tamanho">
-                    <label class="label" for="texto-tamanho-senha">Tamanho da Senha</label>
+                <div class="controle-tamanho">
+                    <label class="label-tamanho" for="texto-tamanho-senha">Tamanho da Senha</label>
                     <p id="texto-tamanho-senha">0</p>
                 </div>
                 <input type="range" class="input-range" id="barra-tamanho-senha" min="0" max="20" value="0">
 
-                <div class="checkboxes">
-                    <label class="label label-checkbox"><input type="checkbox" class="input-checkbox" id="incluir-maiusculas"> Incluir Letras Maiúsculas</label>
-                    <label class="label label-checkbox"><input type="checkbox" class="input-checkbox" id="incluir-minusculas"> Incluir Letras Minúsculas</label>
-                    <label class="label label-checkbox"><input type="checkbox" class="input-checkbox" id="incluir-numeros"> Incluir Números</label>
-                    <label class="label label-checkbox"><input type="checkbox" class="input-checkbox" id="incluir-simbolos"> Incluir Símbolos</label>
+                <div class="lista-opcoes">
+                    <label class="label-checkbox" for="input-checkbox"><input type="checkbox" class="input-checkbox" id="incluir-maiusculas"> Incluir Letras Maiúsculas</label>
+                    <label class="label-checkbox" for="input-checkbox"><input type="checkbox" class="input-checkbox" id="incluir-minusculas"> Incluir Letras Minúsculas</label>
+                    <label class="label-checkbox" for="input-checkbox"><input type="checkbox" class="input-checkbox" id="incluir-numeros"> Incluir Números</label>
+                    <label class="label-checkbox" for="input-checkbox"><input type="checkbox" class="input-checkbox" id="incluir-simbolos"> Incluir Símbolos</label>
                 </div>
             </div>
 
-            <div class="feedback">
-                <p class="feedback-text">Segurança</p>
+            <div class="feedback-seguranca">
+                <label class="feedback-seguranca-label" for="nivel-seguranca">Segurança</label>
                 <div class="nivel-seguranca">
-                    <p class="nivel-seguranca-text" id="texto-nivel-seguranca"></p>
-                    <div class="barra-seguranca"></div>
-                    <div class="barra-seguranca"></div>
-                    <div class="barra-seguranca"></div>
-                    <div class="barra-seguranca"></div>
+                    <p id="texto-nivel-seguranca"></p>
+                    <div class="nivel-seguranca-barra"></div>
+                    <div class="nivel-seguranca-barra"></div>
+                    <div class="nivel-seguranca-barra"></div>
+                    <div class="nivel-seguranca-barra"></div>
                 </div>
             </div>
 
-            <button id="gerar-senha">GERAR SENHA</button>
+            <button class="botao-gerar-senha" id="botao-gerar-senha">GERAR SENHA</button>
         </div>
     </main>
 

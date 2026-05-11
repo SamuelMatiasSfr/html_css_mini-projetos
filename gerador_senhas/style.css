@@ -9,7 +9,7 @@ body {
     height: 100vh;
 }
 
-main {
+.main {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -19,43 +19,43 @@ main {
     background: linear-gradient(to bottom, #14131b 0%, #08070c 100%);
 }
 
-h1 {
+.main-titulo {
     font-size: 22px;
     font-weight: 500;
     color: #817f8e;
 }
 
-.caixa-senha {
+.exibicao-senha {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px 20px;
     width: 350px;
+    padding: 15px 20px;
     background-color: #24232b;
 }
 
-.caixa-senha p {
+.exibicao-senha p {
     font-size: 24px;
     font-weight: 500;
     color: #d5d4db;
 }
 
-.caixa-senha span {
+.exibicao-senha span {
     font-size: 24px;
     color: #6c996f;
 }
 
-.caixa-senha span:hover {
+.exibicao-senha span:hover {
     color: #d5d4db;
     cursor: pointer;
 }
 
-.gerador-senhas {
+.painel-gerador {
     display: flex;
     flex-direction: column;
-    padding: 20px;
     gap: 20px;
     width: 350px;
+    padding: 20px;
     background-color: #24232b;
 }
 
@@ -65,40 +65,40 @@ h1 {
     gap: 20px;
 }
 
-.info-tamanho {
+.controle-tamanho {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.info-tamanho p {
-    font-size: 30px;
-    font-weight: 500;
-    color: #6c996f;
-}
-
-.label {
+.label-tamanho {
     font-size: 16px;
     font-weight: 500;
     color: #d5d4db;
 }
 
+.controle-tamanho p {
+    font-size: 30px;
+    font-weight: 500;
+    color: #6c996f;
+}
+
 .input-range {
     -webkit-appearance: none;
     appearance: none;
-    background-color: #14131b;
     height: 6px;
     color: #d5d4db;
+    background-color: #14131b;
 }
 
 .input-range::-webkit-slider-thumb {
     -webkit-appearance: none;
     width: 20px;
     height: 20px;
-    background-color: #d5d4db;
     border: 2px solid #d5d4db;
     border-radius: 50%;
     cursor: pointer;
+    background-color: #d5d4db;
 }
 
 .input-range::-webkit-slider-thumb:hover {
@@ -106,7 +106,7 @@ h1 {
     background-color: #14131b;
 }
 
-.checkboxes {
+.lista-opcoes {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -115,16 +115,19 @@ h1 {
 .label-checkbox {
     display: flex;
     align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+    color: #d5d4db;
 }
 
 .input-checkbox {
-    margin-right: 10px;
+    position: relative;
     width: 20px;
     height: 20px;
+    margin-right: 10px;
     border: 2px solid #d5d4db;
     appearance: none;
     accent-color: #24232b;
-    position: relative;
 }
 
 .input-checkbox:hover {
@@ -140,23 +143,23 @@ h1 {
 .input-checkbox:checked::before {
     content: "✔";
     position: absolute;
-    color: #14131b;
-    font-size: 14px;
-    font-weight: bold;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    color: #14131b;
+    font-size: 14px;
+    font-weight: bold;
 }
 
-.feedback {
+.feedback-seguranca {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #14131b;
     padding: 15px 20px;
+    background-color: #14131b;
 }
 
-.feedback-text {
+.feedback-seguranca-label {
     font-size: 17px;
     font-weight: 550;
     color: #474454;
@@ -168,34 +171,36 @@ h1 {
     gap: 7px;
 }
 
-.nivel-seguranca-text {
+.nivel-seguranca p {
     font-size: 20px;
     font-weight: 600;
     color: #d5d4db;
 }
 
-.barra-seguranca {
+.nivel-seguranca-barra {
     width: 6px;
     height: 17px;
     border: 1px solid #d5d4db;
 }
 
-button {
+.botao-gerar-senha {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 14px;
-    font-weight: 600;
-    color: #24232b;
     padding: 10px;
     border: none;
     border: 2px solid #6c996f;
+
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    font-weight: 600;
+
+    color: #24232b;
     background-color: #6c996f;
 }
 
-button:hover {
+.botao-gerar-senha:hover {
     background-color: #24232b;
     color: #6c996f;
     cursor: pointer;
