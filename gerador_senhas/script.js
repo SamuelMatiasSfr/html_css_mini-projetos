@@ -156,6 +156,28 @@ function exibirSenha(senha){
     textoSenha.textContent = senha.join("");
 }
 
+function testarInputs(tamanho, quantidadeInclusoes){
+    let inputsValidos = true;
+    
+    if(tamanho === 0) {
+        document.getElementById("alert-tamanho").style.display = "flex";
+        inputsValidos = false;
+    } else {
+        document.getElementById("alert-tamanho").style.display = "none";
+    }
+
+    if(quantidadeInclusoes === 0) {
+        document.getElementById("alert-inclusoes").style.display = "flex";
+        inputsValidos = false;
+    } else {
+        document.getElementById("alert-inclusoes").style.display = "none";
+    }
+
+    document.getElementById("texto-nivel-seguranca").style.display = inputsValidos ? "flex" : "none";
+
+    return inputsValidos;
+}
+
 function configurarGeracaoSenha() {
     const botaoGerarSenha = document.getElementById("botao-gerar-senha");
 
@@ -173,9 +195,11 @@ function configurarGeracaoSenha() {
 
         const tamanho = Number(document.getElementById("texto-tamanho-senha").textContent);
 
-        const senha = gerarSenha(tamanho, quantidadeInclusoes, incluirMaiusculas, incluirMinusculas, incluirNumeros, incluirSimbolos);
-        exibirSenha(senha);
-        atualizarNivelSeguranca(tamanho, quantidadeInclusoes);
+        if(testarInputs(tamanho, quantidadeInclusoes)){
+            const senha = gerarSenha(tamanho, quantidadeInclusoes, incluirMaiusculas, incluirMinusculas, incluirNumeros, incluirSimbolos);
+            exibirSenha(senha);
+            atualizarNivelSeguranca(tamanho, quantidadeInclusoes);
+        } 
     });
 }
 

@@ -53,19 +53,32 @@ body {
 .painel-gerador {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 25px;
     width: 350px;
     padding: 20px;
     background-color: #24232b;
 }
 
+.label-alert {
+    color: #d9534f;
+    display: none;
+}
+
 .controles {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 25px;
 }
 
 .controle-tamanho {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 5px;
+}
+
+.cabecalho-tamanho {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -107,6 +120,12 @@ body {
 }
 
 .lista-opcoes {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.inclusoes {
     display: flex;
     flex-direction: column;
     gap: 10px;
