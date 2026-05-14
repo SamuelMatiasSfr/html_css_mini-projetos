@@ -39,7 +39,7 @@ function atualizarTamanhoSenha() {
     });
 }
 
-function calcularPontosSeguranca(tamanho, quantidadeInclusoes) {
+function calcularPontosSeguranca(tamanho, qtdInclusoes) {
     let pontos = 0;
 
     if(tamanho === 5) pontos += 1;
@@ -47,18 +47,18 @@ function calcularPontosSeguranca(tamanho, quantidadeInclusoes) {
     if(tamanho === 15) pontos += 3;
     if(tamanho === 20) pontos += 4;
 
-    if(quantidadeInclusoes === 1) pontos += 1;
-    if(quantidadeInclusoes === 2) pontos += 2;
-    if(quantidadeInclusoes === 3) pontos += 3;
-    if(quantidadeInclusoes === 4) pontos += 4;
+    if(qtdInclusoes === 1) pontos += 1;
+    if(qtdInclusoes === 2) pontos += 2;
+    if(qtdInclusoes === 3) pontos += 3;
+    if(qtdInclusoes === 4) pontos += 4;
 
     return pontos;
 }
 
-function pintarBarrasSeguranca(quantidadeBarras, codigoCorBarra) {
+function pintarBarrasSeguranca(qtdBarras, codigoCorBarra) {
     const barrasSeguranca = document.querySelectorAll(".nivel-seguranca-barra");
     barrasSeguranca.forEach((barra, index) => {
-        if(index < quantidadeBarras) {
+        if(index < qtdBarras) {
             barra.style.backgroundColor = codigoCorBarra;
         } else {
             barra.style.backgroundColor = "#14131b";
@@ -66,32 +66,32 @@ function pintarBarrasSeguranca(quantidadeBarras, codigoCorBarra) {
     });
 }
 
-function atualizarNivelSeguranca(tamanho, quantidadeInclusoes) {
-    const pontos = calcularPontosSeguranca(tamanho, quantidadeInclusoes);
+function atualizarNivelSeguranca(tamanho, qtdInclusoes) {
+    const pontos = calcularPontosSeguranca(tamanho, qtdInclusoes);
     
     const textoNivelSeguranca = document.getElementById("texto-nivel-seguranca");
-    let quantidadeBarras = 0;
+    let qtdBarras = 0;
     let codigoCorBarra = "";
 
     if(pontos >= 0 && pontos <= 2) {
         textoNivelSeguranca.textContent = "Muito Baixo";
-        quantidadeBarras = 1;
+        qtdBarras = 1;
         codigoCorBarra = "#d9534f";
     } else if (pontos >= 3 && pontos <= 4) {
         textoNivelSeguranca.textContent = "Baixo";
-        quantidadeBarras = 2;
+        qtdBarras = 2;
         codigoCorBarra = "#f0ad4e";
     } else if (pontos >= 5 && pontos <= 6) {
         textoNivelSeguranca.textContent = "Médio";
-        quantidadeBarras = 3;
+        qtdBarras = 3;
         codigoCorBarra = "#facb68";
     } else if (pontos >= 7 && pontos <= 8) {
         textoNivelSeguranca.textContent = "Alto";
-        quantidadeBarras = 4;
+        qtdBarras = 4;
         codigoCorBarra = "#6c996f";
     }
 
-    pintarBarrasSeguranca(quantidadeBarras, codigoCorBarra);
+    pintarBarrasSeguranca(qtdBarras, codigoCorBarra);
 }
 
 function embaralharSenha(senha) {
@@ -105,42 +105,48 @@ function embaralharSenha(senha) {
     }
 }
 
-function gerarSenha(tamanho, quantidadeInclusoes, incluirMaiusculas, incluirMinusculas, incluirNumeros, incluirSimbolos) {
-    const proporcaoTipoCaractere = 1 / quantidadeInclusoes;
-    const quantidadeCaracteres = Math.round(tamanho * proporcaoTipoCaractere);
+function gerarSenha(tamanho, qtdInclusoes, incluirMaiusculas, incluirMinusculas, incluirNumeros, incluirSimbolos) {
+    const basePorTipo = Math.floor(tamanho / qtdInclusoes);
+    let resto = tamanho % qtdInclusoes;
 
-    const caracteres = {
-        maiusculas: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
-        minusculas: "abcdefghijklmnopqrstuvwxyz",
-        numeros: "0123456789",
-        simbolos: "!@#$%^&*()_+~`|}{[]:;?><,./-="
-    };
-
+    const caracteres = {};
     const senha = [];
 
     if(incluirMaiusculas) {
-        for(let i=0; i<quantidadeCaracteres; i++) {
+        caracteres.maiusculas = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        const qtdMaiusculas = basePorTipo + (resto > 0 ? 1 : 0);
+        resto--;
+        for(let i=0; i<qtdMaiusculas; i++) {
             const indice = Math.floor(Math.random() * caracteres.maiusculas.length);
             senha.push(caracteres.maiusculas[indice]);
         }
     }
 
     if(incluirMinusculas) {
-        for(let i=0; i<quantidadeCaracteres; i++) {
+        caracteres.minusculas = "abcdefghijklmnopqrstuvwxyz";
+        const qtdMinusculas = basePorTipo + (resto > 0 ? 1 : 0);
+        resto--;
+        for(let i=0; i<qtdMinusculas; i++) {
             const indice = Math.floor(Math.random() * caracteres.minusculas.length);
             senha.push(caracteres.minusculas[indice]);
         }
     }
 
     if(incluirNumeros) {
-        for(let i=0; i<quantidadeCaracteres; i++) {
+        caracteres.numeros = "0123456789";
+        const qtdNumeros = basePorTipo + (resto > 0 ? 1 : 0);
+        resto--;
+        for(let i=0; i<qtdNumeros; i++) {
             const indice = Math.floor(Math.random() * caracteres.numeros.length);
             senha.push(caracteres.numeros[indice]);
         }
     }
 
     if(incluirSimbolos) {
-        for(let i=0; i<quantidadeCaracteres; i++) {
+        caracteres.simbolos = "!@#$%^&*()_+~`|}{[]:;?><,./-=";
+        const qtdSimbolos = basePorTipo + (resto > 0 ? 1 : 0);
+        resto--;
+        for(let i=0; i<qtdSimbolos; i++) {
             const indice = Math.floor(Math.random() * caracteres.simbolos.length);
             senha.push(caracteres.simbolos[indice]);
         }
@@ -156,7 +162,7 @@ function exibirSenha(senha){
     textoSenha.textContent = senha.join("");
 }
 
-function testarInputs(tamanho, quantidadeInclusoes){
+function testarInputs(tamanho, qtdInclusoes){
     let inputsValidos = true;
     
     if(tamanho === 0) {
@@ -166,7 +172,7 @@ function testarInputs(tamanho, quantidadeInclusoes){
         document.getElementById("alert-tamanho").style.display = "none";
     }
 
-    if(quantidadeInclusoes === 0) {
+    if(qtdInclusoes === 0) {
         document.getElementById("alert-inclusoes").style.display = "flex";
         inputsValidos = false;
     } else {
@@ -187,18 +193,18 @@ function configurarGeracaoSenha() {
         const incluirNumeros = document.getElementById("incluir-numeros").checked;
         const incluirSimbolos = document.getElementById("incluir-simbolos").checked;
 
-        let quantidadeInclusoes  = 0;
-        if(incluirMaiusculas) quantidadeInclusoes ++;
-        if(incluirMinusculas) quantidadeInclusoes ++;
-        if(incluirNumeros) quantidadeInclusoes ++;
-        if(incluirSimbolos) quantidadeInclusoes ++;
+        let qtdInclusoes  = 0;
+        if(incluirMaiusculas) qtdInclusoes ++;
+        if(incluirMinusculas) qtdInclusoes ++;
+        if(incluirNumeros) qtdInclusoes ++;
+        if(incluirSimbolos) qtdInclusoes ++;
 
         const tamanho = Number(document.getElementById("texto-tamanho-senha").textContent);
 
-        if(testarInputs(tamanho, quantidadeInclusoes)){
-            const senha = gerarSenha(tamanho, quantidadeInclusoes, incluirMaiusculas, incluirMinusculas, incluirNumeros, incluirSimbolos);
+        if(testarInputs(tamanho, qtdInclusoes)){
+            const senha = gerarSenha(tamanho, qtdInclusoes, incluirMaiusculas, incluirMinusculas, incluirNumeros, incluirSimbolos);
             exibirSenha(senha);
-            atualizarNivelSeguranca(tamanho, quantidadeInclusoes);
+            atualizarNivelSeguranca(tamanho, qtdInclusoes);
         } 
     });
 }
