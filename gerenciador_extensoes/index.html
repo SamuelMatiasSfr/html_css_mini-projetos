@@ -10,9 +10,9 @@
 </head>
 <body>
     <header class="header-site">
-        <div class="header-logo">
+        <div class="header-brand">
             <span class="header-icon material-symbols-outlined">extension</span>
-            <span class="header-name">Extensions</span>
+            <span class="header-title">Extensions</span>
         </div>
 
         <button class="header-button" id="button-mode">
@@ -21,260 +21,258 @@
         </button>
     </header>
 
-    <main class="main">
-       <section class="section-extensions">
-            <header class="extensions-header">
-                <h1 class="extensions-title">Extensions List</h1>
+    <main class="main-extensions">
+        <header class="extensions-header">
+            <h1 class="extensions-title">Extensions List</h1>
 
-                <div class="extensions-buttons">
-                    <button class="button-filter" id="button-all">All</button>
-                    <button class="button-filter" id="button-active">Active</button>
-                    <button class="button-filter" id="button-inactive">Inactive</button>
-                </div>
-            </header>
-            
-            <div class="extensions-grid">
-                <article class="article-extension">
-                    <div class="extension-header">
-                        <span class="extension-icon material-symbols-outlined">search</span>
-                        <div class="extension-info">
-                            <h2 class="extension-name">DevLens</h2>
-                            <p class="extension-description">
-                                Quickly inspect page layouts and visualize element boundaries.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="extension-actions">
-                        <button class="extension-button" id="button-remove">Remove</button>
-                        <label class="extension-switch">
-                            <input type="checkbox" checked>
-                            <span class="extension-slider"></span>
-                        </label>
-                    </div>
-                </article>
-
-                <article class="article-extension">
-                    <div class="extension-header">
-                        <span class="extension-icon material-symbols-outlined">code</span>
-                        <div class="extension-info">
-                            <h2 class="extension-name">StyleSpy</h2>
-                            <p class="extension-description">
-                                Instantly analyze and copy CSS from any webpage element.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="extension-actions">
-                        <button class="extension-button" id="button-remove">Remove</button>
-                        <label class="extension-switch">
-                            <input type="checkbox" checked>
-                            <span class="extension-slider"></span>
-                        </label>
-                    </div>
-                </article>
-
-                <article class="article-extension">
-                    <div class="extension-header">
-                        <span class="extension-icon material-symbols-outlined">bolt</span>
-                        <div class="extension-info">
-                            <h2 class="extension-name">SpeedBoost</h2>
-                            <p class="extension-description">
-                                Optimizes browser resource usage to accelerate page loading.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="extension-actions">
-                        <button class="extension-button" id="button-remove">Remove</button>
-                        <label class="extension-switch">
-                            <input type="checkbox">
-                            <span class="extension-slider"></span>
-                        </label>
-                    </div>
-                </article>
-
-                <article class="article-extension">
-                    <div class="extension-header">
-                        <span class="extension-icon material-symbols-outlined">data_object</span>
-                        <div class="extension-info">
-                            <h2 class="extension-name">JSONWizard</h2>
-                            <p class="extension-description">
-                                Formats, validates, and prettifies JSON responses in-browser.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="extension-actions">
-                        <button class="extension-button" id="button-remove">Remove</button>
-                        <label class="extension-switch">
-                            <input type="checkbox" checked>
-                            <span class="extension-slider"></span>
-                        </label>
-                    </div>
-                </article>
-
-                <article class="article-extension">
-                    <div class="extension-header">
-                        <span class="extension-icon material-symbols-outlined">tab</span>
-                        <div class="extension-info">
-                            <h2 class="extension-name">TabMaster Pro</h2>
-                            <p class="extension-description">
-                                Organizes browser tabs into groups and sessions.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="extension-actions">
-                        <button class="extension-button" id="button-remove">Remove</button>
-                        <label class="extension-switch">
-                            <input type="checkbox" checked>
-                            <span class="extension-slider"></span>
-                        </label>
-                    </div>
-                </article>
-
-                <article class="article-extension">
-                    <div class="extension-header">
-                        <span class="extension-icon material-symbols-outlined">devices</span>
-                        <div class="extension-info">
-                            <h2 class="extension-name">ViewportBuddy</h2>
-                            <p class="extension-description">
-                                Simulates various screen resolutions directly within the browser.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="extension-actions">
-                        <button class="extension-button" id="button-remove">Remove</button>
-                        <label class="extension-switch">
-                            <input type="checkbox">
-                            <span class="extension-slider"></span>
-                        </label>
-                    </div>
-                </article>
-
-                <article class="article-extension">
-                    <div class="extension-header">
-                        <span class="extension-icon material-symbols-outlined">edit_note</span>
-                        <div class="extension-info">
-                            <h2 class="extension-name">Markup Notes</h2>
-                            <p class="extension-description">
-                                Enables annotation and notes directly onto webpages for collaborative debugging.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="extension-actions">
-                        <button class="extension-button" id="button-remove">Remove</button>
-                        <label class="extension-switch">
-                            <input type="checkbox" checked>
-                            <span class="extension-slider"></span>
-                        </label>
-                    </div>
-                </article>
-
-                <article class="article-extension">
-                    <div class="extension-header">
-                        <span class="extension-icon material-symbols-outlined">grid_view</span>
-                        <div class="extension-info">
-                            <h2 class="extension-name">GridGuides</h2>
-                            <p class="extension-description">
-                                Overlay customizable grids and alignment guides on any webpage.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="extension-actions">
-                        <button class="extension-button" id="button-remove">Remove</button>
-                        <label class="extension-switch">
-                            <input type="checkbox">
-                            <span class="extension-slider"></span>
-                        </label>
-                    </div>
-                </article>
-
-                <article class="article-extension">
-                    <div class="extension-header">
-                        <span class="extension-icon material-symbols-outlined">palette</span>
-                        <div class="extension-info">
-                            <h2 class="extension-name">Palette Picker</h2>
-                            <p class="extension-description">
-                                Instantly extracts color palettes from any webpage.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="extension-actions">
-                        <button class="extension-button" id="button-remove">Remove</button>
-                        <label class="extension-switch">
-                            <input type="checkbox" checked>
-                            <span class="extension-slider"></span>
-                        </label>
-                    </div>
-                </article>
-
-                <article class="article-extension">
-                    <div class="extension-header">
-                        <span class="extension-icon material-symbols-outlined">link</span>
-                        <div class="extension-info">
-                            <h2 class="extension-name">LinkChecker</h2>
-                            <p class="extension-description">
-                                Scans and highlights broken links on any page.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="extension-actions">
-                        <button class="extension-button" id="button-remove">Remove</button>
-                        <label class="extension-switch">
-                            <input type="checkbox" checked>
-                            <span class="extension-slider"></span>
-                        </label>
-                    </div>
-                </article>
-
-                <article class="article-extension">
-                    <div class="extension-header">
-                        <span class="extension-icon material-symbols-outlined">photo_camera</span>
-                        <div class="extension-info">
-                            <h2 class="extension-name">DOM Snapshot</h2>
-                            <p class="extension-description">
-                                Capture and export DOM structures quickly.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="extension-actions">
-                        <button class="extension-button" id="button-remove">Remove</button>
-                        <label class="extension-switch">
-                            <input type="checkbox">
-                            <span class="extension-slider"></span>
-                        </label>
-                    </div>
-                </article>
-
-                <article class="article-extension">
-                    <div class="extension-header">
-                        <span class="extension-icon material-symbols-outlined">terminal</span>
-                        <div class="extension-info">
-                            <h2 class="extension-name">ConsolePlus</h2>
-                            <p class="extension-description">
-                                Enhanced developer console with advanced filtering and logging.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="extension-actions">
-                        <button class="extension-button" id="button-remove">Remove</button>
-                        <label class="extension-switch">
-                            <input type="checkbox" checked>
-                            <span class="extension-slider"></span>
-                        </label>
-                    </div>
-                </article>
+            <div class="extensions-filters">
+                <button class="button-filter" id="button-all">All</button>
+                <button class="button-filter" id="button-active">Active</button>
+                <button class="button-filter" id="button-inactive">Inactive</button>
             </div>
-       </section>
+        </header>
+        
+        <div class="extensions-grid">
+            <article class="article-extension">
+                <div class="extension-header">
+                    <span class="extension-icon material-symbols-outlined" style="background-color: #c0d8be;">search</span>
+                    <div class="extension-info">
+                        <h2 class="extension-name">DevLens</h2>
+                        <p class="extension-description">
+                            Quickly inspect page layouts and visualize element boundaries.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="extension-actions">
+                    <button class="extension-button" id="button-remove">Remove</button>
+                    <label class="extension-switch">
+                        <input type="checkbox">
+                        <span class="extension-slider"></span>
+                    </label>
+                </div>
+            </article>
+
+            <article class="article-extension">
+                <div class="extension-header">
+                    <span class="extension-icon material-symbols-outlined" style="background-color: #a8d6e5;">code</span>
+                    <div class="extension-info">
+                        <h2 class="extension-name">StyleSpy</h2>
+                        <p class="extension-description">
+                            Instantly analyze and copy CSS from any webpage element.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="extension-actions">
+                    <button class="extension-button" id="button-remove">Remove</button>
+                    <label class="extension-switch">
+                        <input type="checkbox">
+                        <span class="extension-slider"></span>
+                    </label>
+                </div>
+            </article>
+
+            <article class="article-extension">
+                <div class="extension-header">
+                    <span class="extension-icon material-symbols-outlined" style="background-color: #ffcfd5;">bolt</span>
+                    <div class="extension-info">
+                        <h2 class="extension-name">SpeedBoost</h2>
+                        <p class="extension-description">
+                            Optimizes browser resource usage to accelerate page loading.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="extension-actions">
+                    <button class="extension-button" id="button-remove">Remove</button>
+                    <label class="extension-switch">
+                        <input type="checkbox">
+                        <span class="extension-slider"></span>
+                    </label>
+                </div>
+            </article>
+
+            <article class="article-extension">
+                <div class="extension-header">
+                    <span class="extension-icon material-symbols-outlined" style="background-color: #f2bfe6;">data_object</span>
+                    <div class="extension-info">
+                        <h2 class="extension-name">JSONWizard</h2>
+                        <p class="extension-description">
+                            Formats, validates, and prettifies JSON responses in-browser.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="extension-actions">
+                    <button class="extension-button" id="button-remove">Remove</button>
+                    <label class="extension-switch">
+                        <input type="checkbox">
+                        <span class="extension-slider"></span>
+                    </label>
+                </div>
+            </article>
+
+            <article class="article-extension">
+                <div class="extension-header">
+                    <span class="extension-icon material-symbols-outlined" style="background-color: #ceb9f1;">tab</span>
+                    <div class="extension-info">
+                        <h2 class="extension-name">TabMaster Pro</h2>
+                        <p class="extension-description">
+                            Organizes browser tabs into groups and sessions.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="extension-actions">
+                    <button class="extension-button" id="button-remove">Remove</button>
+                    <label class="extension-switch">
+                        <input type="checkbox">
+                        <span class="extension-slider"></span>
+                    </label>
+                </div>
+            </article>
+
+            <article class="article-extension">
+                <div class="extension-header">
+                    <span class="extension-icon material-symbols-outlined" style="background-color: #a3c5f3;">devices</span>
+                    <div class="extension-info">
+                        <h2 class="extension-name">ViewportBuddy</h2>
+                        <p class="extension-description">
+                            Simulates various screen resolutions directly within the browser.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="extension-actions">
+                    <button class="extension-button" id="button-remove">Remove</button>
+                    <label class="extension-switch">
+                        <input type="checkbox">
+                        <span class="extension-slider"></span>
+                    </label>
+                </div>
+            </article>
+
+            <article class="article-extension">
+                <div class="extension-header">
+                    <span class="extension-icon material-symbols-outlined" style="background-color: #90daf3;">edit_note</span>
+                    <div class="extension-info">
+                        <h2 class="extension-name">Markup Notes</h2>
+                        <p class="extension-description">
+                            Enables annotation and notes directly onto webpages for collaborative debugging.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="extension-actions">
+                    <button class="extension-button" id="button-remove">Remove</button>
+                    <label class="extension-switch">
+                        <input type="checkbox">
+                        <span class="extension-slider"></span>
+                    </label>
+                </div>
+            </article>
+
+            <article class="article-extension">
+                <div class="extension-header">
+                    <span class="extension-icon material-symbols-outlined" style="background-color: #b8b8fe;">grid_view</span>
+                    <div class="extension-info">
+                        <h2 class="extension-name">GridGuides</h2>
+                        <p class="extension-description">
+                            Overlay customizable grids and alignment guides on any webpage.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="extension-actions">
+                    <button class="extension-button" id="button-remove">Remove</button>
+                    <label class="extension-switch">
+                        <input type="checkbox">
+                        <span class="extension-slider"></span>
+                    </label>
+                </div>
+            </article>
+
+            <article class="article-extension">
+                <div class="extension-header">
+                    <span class="extension-icon material-symbols-outlined" style="background-color: #98f5e0;">palette</span>
+                    <div class="extension-info">
+                        <h2 class="extension-name">Palette Picker</h2>
+                        <p class="extension-description">
+                            Instantly extracts color palettes from any webpage.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="extension-actions">
+                    <button class="extension-button" id="button-remove">Remove</button>
+                    <label class="extension-switch">
+                        <input type="checkbox">
+                        <span class="extension-slider"></span>
+                    </label>
+                </div>
+            </article>
+
+            <article class="article-extension">
+                <div class="extension-header">
+                    <span class="extension-icon material-symbols-outlined" style="background-color: #ffd8bc;">link</span>
+                    <div class="extension-info">
+                        <h2 class="extension-name">LinkChecker</h2>
+                        <p class="extension-description">
+                            Scans and highlights broken links on any page.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="extension-actions">
+                    <button class="extension-button" id="button-remove">Remove</button>
+                    <label class="extension-switch">
+                        <input type="checkbox">
+                        <span class="extension-slider"></span>
+                    </label>
+                </div>
+            </article>
+
+            <article class="article-extension">
+                <div class="extension-header">
+                    <span class="extension-icon material-symbols-outlined" style="background-color: #8eecf5;">photo_camera</span>
+                    <div class="extension-info">
+                        <h2 class="extension-name">DOM Snapshot</h2>
+                        <p class="extension-description">
+                            Capture and export DOM structures quickly.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="extension-actions">
+                    <button class="extension-button" id="button-remove">Remove</button>
+                    <label class="extension-switch">
+                        <input type="checkbox">
+                        <span class="extension-slider"></span>
+                    </label>
+                </div>
+            </article>
+
+            <article class="article-extension">
+                <div class="extension-header">
+                    <span class="extension-icon material-symbols-outlined" style="background-color: #b9fcc1;">terminal</span>
+                    <div class="extension-info">
+                        <h2 class="extension-name">ConsolePlus</h2>
+                        <p class="extension-description">
+                            Enhanced developer console with advanced filtering and logging.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="extension-actions">
+                    <button class="extension-button" id="button-remove">Remove</button>
+                    <label class="extension-switch">
+                        <input type="checkbox">
+                        <span class="extension-slider"></span>
+                    </label>
+                </div>
+            </article>
+        </div>
     </main>
 
     <script src="script.js"></script>
