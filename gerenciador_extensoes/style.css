@@ -146,7 +146,7 @@ body {
     justify-content: space-between;
 }
 
-.extension-button {
+.extension-button-remove {
     width: fit-content;
     font-size: 13px;
     color: #e0e4e9;
@@ -156,7 +156,7 @@ body {
     background-color: #2f364c;
 }
 
-.extension-button:hover {
+.extension-button-remove:hover {
     cursor: pointer;
 }
 
@@ -186,21 +186,20 @@ body {
 .extension-slider:before {
     position: absolute;
     content: "";
-    height: 18px;
-    width: 18px;
-    left: 1px;
+    height: 19px;
+    width: 19px;
     bottom: 1px;
     background-color: #e0e4e9;
     transition: 0.4s;
     border-radius: 50%; 
 }
 
-.extension-switch input:checked + .slider {
+.extension-switch input:checked + .extension-slider {
     background-color: #f05e5d;
 }
 
-.extension-switch input:checked + .slider:before {
-    transform: translateX(26px);
+.extension-switch input:checked + .extension-slider:before {
+    transform: translateX(22px);
 }
 
 
