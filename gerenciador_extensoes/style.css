@@ -4,13 +4,31 @@
     box-sizing: border-box;
 }
 
+body[data-theme="dark"] {
+    --bg-body: linear-gradient(to bottom, #050a1d, #081236);
+    --bg-area: #1f2535;
+    --bg-action: #2f364c;
+    --text: #e0e4e9;
+    --text-action: #e0e4e9;
+    --border: 1px solid #e0e4e9;
+}
+
+body[data-theme="light"] {
+    --bg-body: linear-gradient(to bottom, #e0e4e9, #e0e4e9);
+    --bg-area: #cbced3;
+    --bg-action: #a9aaac;
+    --text: #050a1d;
+    --text-action: #050a1d;
+    --border: 1px solid #050a1d;
+}
+
 body {
     font-family: 'Noto Sans', sans-serif;
     padding: 50px 100px;
     display: flex;
     flex-direction: column;
     gap: 50px;
-    background: linear-gradient(to bottom, #050a1d, #081236);
+    background: var(--bg-body);
 }
 
 .header-site {
@@ -19,7 +37,8 @@ body {
     justify-content: space-between;
     padding: 15px;
     border-radius: 15px;
-    background-color: #1f2535;
+    border: var(--border);
+    background-color: var(--bg-area);
 }
 
 .header-brand {
@@ -36,15 +55,15 @@ body {
 .header-title {
     font-size: 20px;
     font-weight: bold;
-    color: #e0e4e9;
+    color: var(--text);
 }
 
 .header-button {
     display: flex;
     padding: 7px;
-    border: none;
+    border: var(--border);
     border-radius: 5px;
-    background-color: #2f364c;
+    background-color: var(--bg-action);
 }
 
 .header-button:hover {
@@ -52,7 +71,7 @@ body {
 }
 
 .button-icon {
-    color: #e0e4e9;
+    color: var(--text-action);
 }
 
 .main-extensions {
@@ -69,7 +88,7 @@ body {
 
 .extensions-title {
     font-size: 28px;
-    color: #e0e4e9;
+    color: var(--text);
 }
 
 .extensions-filters {
@@ -81,11 +100,11 @@ body {
 .button-filter[data-status="inactive"] {
     width: 80px;
     font-size: 15px;
-    color: #e0e4e9;
+    color: var(--text-action);
     padding: 10px;
-    border: 1px solid #e0e4e9;
+    border: var(--border);
     border-radius: 15px;
-    background-color: #2f364c;
+    background-color: var(--bg-action);
 }
 
 .button-filter[data-status="active"] {
@@ -93,7 +112,7 @@ body {
     font-size: 15px;
     color: #050a1d;
     padding: 10px;
-    border: 1px solid #050a1d;
+    border: var(--border);
     border-radius: 15px;
     background-color: #f05e5d;
 }
@@ -112,10 +131,10 @@ body {
     display: flex;
     flex-direction: column;
     gap: 30px;
-    border: 1px solid #e0e4e9;
+    border: var(--border);
     border-radius: 15px;
     padding: 15px;
-    background-color: #1f2535;
+    background-color: var(--bg-area);
 }
 
 .extension-header {
@@ -141,13 +160,13 @@ body {
 
 .extension-name {
     font-size: 18px;
-    color: #e0e4e9;
+    color: var(--text);
 }
 
 .extension-description {
     font-size: 12px;
     text-align: justify;
-    color: #e0e4e9;
+    color: var(--text);
 }
 
 .extension-actions {
@@ -159,11 +178,11 @@ body {
 .extension-button-remove {
     width: fit-content;
     font-size: 13px;
-    color: #e0e4e9;
+    color: var(--text-action);
     padding: 10px 15px;
-    border: 1px solid #e0e4e9;
+    border: var(--border);
     border-radius: 20px;
-    background-color: #2f364c;
+    background-color: var(--bg-action);
 }
 
 .extension-button-remove:hover {
@@ -188,7 +207,7 @@ body {
     left: 0; 
     right: 0; 
     bottom: 0;
-    background-color: #2f364c;
+    background-color: var(--bg-action);
     transition: 0.4s;
     border-radius: 34px;
 }

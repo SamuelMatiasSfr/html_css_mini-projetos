@@ -1,3 +1,26 @@
+function mudarModoSite() {
+    const buttonMode = document.getElementById("button-mode");
+    const iconSun = document.getElementById("icon-sun");
+    const iconMoon = document.getElementById("icon-moon");
+
+    buttonMode.addEventListener("click", () => {
+        let modo = document.body.dataset.theme;
+
+        if(modo === "dark") {
+            modo = "light";
+            iconSun.style.display = "none";
+            iconMoon .style.display = "flex";
+        } 
+        else if(modo === "light") {
+            modo = "dark";
+            iconSun.style.display = "flex";
+            iconMoon .style.display = "none";
+        }
+
+        document.body.dataset.theme = modo;
+    });
+}
+
 function removerExtensao() {
     const extensions = document.querySelectorAll(".article-extension");
     const buttonsRemove = document.querySelectorAll(".extension-button-remove");    
@@ -78,6 +101,7 @@ function filtrarExtensoes() {
 }
 
 function main() {
+    mudarModoSite();
     removerExtensao();
     mudarStatusExtensao();
     filtrarExtensoes();
