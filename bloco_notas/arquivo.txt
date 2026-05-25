@@ -1,2 +1,0 @@
-- Melhorar o layout 
-- Deixar responsivo

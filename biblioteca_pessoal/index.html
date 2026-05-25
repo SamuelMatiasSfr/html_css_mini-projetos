@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"/> 
+    <link rel="stylesheet" href="style.css">
+    <title>Minha Biblioteca</title>
+</head>
+<body>
+    <header class="page-header">
+        <span class="header-icon material-symbols-outlined">book_ribbon</span> 
+        <span class="header-title">Minha Biblioteca</span>
+        <small class="header-subtitle">Biblioteca Pessoal</small>
+    </header>
+
+    <main class="page-main">
+        <div class="top-sections"> 
+            <section class="section add-book">
+                <h1 class="section-title">Adicionar Livro</h1>
+                <small class="aux-text">Cadastre um novo livro na sua biblioteca</small> 
+
+                <button class="add-book-box">
+                    <span class="icon-add-book material-symbols-outlined">add</span>
+                    <strong class="add-book-title">Adicionar Novo Livro</strong> 
+                    <small class="aux-text">Clique para adicionar</small> 
+                </button>
+            </section>  
+
+            <section class="section stats">
+                <h1 class="section-title">Adicionar Livro</h1>
+                <p class="aux-text">Cadastre um novo livro na sua biblioteca</p>
+                
+                <div class="stats-card">
+                    <span class="icon-stats icon-book material-symbols-outlined">book_5</span> 
+                    <p class="stats-value">0</p>
+                    <small class="aux-text">Total de Livros</small>
+                </div>
+
+                <div class="stats-card">
+                    <span class="icon-stats icon-check material-symbols-outlined">check_circle</span> 
+                    <p class="stats-value">0</p>
+                    <small class="aux-text">Lidos</small>
+                </div>
+
+                <div class="stats-card">
+                    <span class="icon-stats icon-clock material-symbols-outlined">hourglass_bottom</span>           
+                    <p class="stats-value">0</p>
+                    <small class="aux-text">Lendo</small>
+                </div>
+
+                <div class="stats-card">
+                    <span class="icon-stats icon-marker material-symbols-outlined">bookmark_star</span>
+                    <p class="stats-value">0</p>
+                    <small class="aux-text">Quero Ler</small>
+                </div>
+            </section>
+        </div>
+
+        <section class="section books">
+            <header class="books-header">
+                <h1 class="section-title">Todos os Livros</h1>
+
+                <select class="select-filter" name="select-filter">
+                    <option value="todos">Todos os Livros</option>
+                    <option value="lidos">Lidos</option>
+                    <option value="lendo">Lendo</option>
+                    <option value="quero-ler">Quero Ler</option>
+                </select>
+            </header>
+
+            <div class="all-books">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th class="table-header">Livro</th>
+                            <th class="table-header">Autor</th>
+                            <th class="table-header">Categoria</th>
+                            <th class="table-header">Status</th>
+                            <th class="table-header">Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="table-cell">Ana Silva</td>
+                            <td class="table-cell">Desenvolvedora</td>
+                            <td class="table-cell">Ana Silva</td>
+                            <td class="table-cell">Desenvolvedora</td>
+                            <td class="table-cell">
+                                <div class="book-table-actions">
+                                    <span class="icon-action icon-read material-symbols-outlined">check</span> 
+                                    <span class="icon-action icon-edit material-symbols-outlined">edit</span> 
+                                    <span class="icon-action icon-delete material-symbols-outlined">delete</span> 
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-cell">Ana Silva</td>
+                            <td class="table-cell">Desenvolvedora</td>
+                            <td class="table-cell">Ana Silva</td>
+                            <td class="table-cell">Desenvolvedora</td>
+                            <td class="table-cell">
+                                <div class="book-table-actions">
+                                    <span class="icon-action icon-read material-symbols-outlined">check</span> 
+                                    <span class="icon-action icon-edit material-symbols-outlined">edit</span> 
+                                    <span class="icon-action icon-delete material-symbols-outlined">delete</span>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <footer class="books-footer">
+                <small class="aux-text">Mostrando 1 a 5 de 72 livros</small> 
+
+                <div class="pagination">
+                    <span class="icon-arrow icon-left material-symbols-outlined">keyboard_arrow_left</span> 
+                
+                    <a class="page" data-status="active" href="">1</a>
+                    <a class="page" data-status="inactive" href="">2</a>
+                    <a class="page" data-status="inactive" href="">3</a>
+                    
+                    <small class="aux-text">...</small>
+
+                    <a class="page" data-status="inactive" href="page">15</a>
+
+                    <span class="icon-arrow icon-right material-symbols-outlined">keyboard_arrow_right</span> 
+                </div>
+            </footer>
+        </section>
+
+        <section class="section book-modal">
+            <header class="book-modal-header">
+                <h1 class="section-title">Adicionar Livro</h1>
+                <small class="aux-text">Preencha as informações do livro abaixo</small> 
+            </header>
+
+            <form class="form">
+                <label class="form-label" for="book-name">
+                    Nome do Livro
+                    <input class="form-input" name="book-name" type="text">
+                </label>
+
+                <label class="form-label" for="book-autor">
+                    Autor
+                    <input class="form-input" name="book-category" type="text">
+                </label>
+
+                <label class="form-label" for="book-name">
+                    Categoria
+                    <select class="form-select" name="book-category">
+                        <option value="romance">Romance</option>
+                        <option value="fantasia">Fantasia</option>
+                        <option value="desenvolvimento-pessoal">Desenvolvimento Pessoal</option>
+                        <option value="suspense-thriller">Suspense</option>
+                        <option value="ficcao-cientifica">Ficção Científica</option>
+                        <option value="biografias-autobiografias">Biografias e Autobiografias</option>
+                        <option value="negocios-financas">Negócios e Finanças</option>
+                        <option value="mangas-hqs">Mangás e HQs</option>
+                        <option value="terror">Terror</option>
+                    </select>
+                </label>
+
+                <label class="form-label" for="book-status">
+                    <select class="form-select" name="book-status">
+                        <option value="lido">Lido</option>
+                        <option value="lendo">Lendo</option>
+                        <option value="quero-ler">Quero Ler</option>
+                    </select>
+                </label>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
