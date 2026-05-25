@@ -1,0 +1,340 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #e5e5e6;
+}
+
+
+/* === HOVER === */
+
+.add-book-box:hover,
+.icon-action:hover,
+.icon-arrow:hover,
+.upload-box:hover,
+.input:hover {
+    cursor: pointer;
+}
+
+.form-button:hover {
+    cursor: pointer;
+    background-color: #666bac;
+}
+
+.input:focus {
+    outline: none;
+}
+
+
+/* === ICONS === */
+
+.icon-add-book {
+    background-color: #5259b2;
+    color: #f8f8fa;
+    padding: 5px;
+    border-radius: 50%;
+    width: fit-content;
+}
+
+.icon-stats {
+    font-size: 30px;
+    padding: 10px;
+    border-radius: 50%;
+    width: fit-content;
+}
+
+.icon-book {
+    color: #5259b2;
+    background-color: #e5e5e6;
+}
+
+.icon-check {
+    color: #35a04f;
+    background-color: #c1d8c7;
+}
+
+.icon-clock {
+    color: #e7a125;
+    background-color: #f3d5a5;
+}
+
+.icon-marker {
+    color: #3a86ec;
+    background-color: #b4d5ff;
+}
+
+.icon-action {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.icon-read {
+    color: #35a04f;
+    background-color: #c1d8c7;
+}
+
+.icon-edit {
+    color: #5259b2;
+    background-color: #e5e5e6;
+}
+
+.icon-delete {
+    color: #f54046;
+    background-color: #fddede;
+}
+
+.icon-arrow {
+    padding: 5px 10px;
+}
+
+.icon-upload {
+    background-color: #5259b2;
+    color: #f8f8fa;
+    padding: 5px;
+    border-radius: 50%;
+    width: fit-content;
+}
+
+
+/* === HEADER === */
+
+.page-header {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 20px;
+    background-color: #1d2c4c;
+}
+
+.X {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.header-icon {
+    font-size: 48px;
+    color: #f8f8fa;
+    background-color: #5259b2;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.header-title {
+    font-size: 24px;
+    color: #f8f8fa;
+}
+
+.header-subtitle {
+    font-size: 16px;
+    color: #f8f8fa;
+}
+
+
+/* === MAIN, SECTION E ELEMENTOS REUTILIZÁVEIS === */
+
+.page-main {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+}
+
+.top-sections {
+    display: flex;
+    gap: 20px;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+    background-color: #f8f8fa;
+    border-radius: 10px;
+}
+
+.section-title {
+    font-size: 24px;
+}
+
+.aux-text {
+    font-size: 14px;
+    color: #757881;
+    font-weight: 500;
+}
+
+.input {
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #e5e5e6
+}
+
+
+/* === SECTION ADICIONAR LIVRO === */
+
+.add-book {
+    width: 30%;
+}
+
+.add-book-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+    padding: 25px 0;
+    border: 1px dashed #e5e5e6;
+    background-color: #f8f8fa;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.add-book-title {
+    font-size: 15px;
+}
+
+
+/* === SECTION ESTATÍSTICAS === */
+
+.stats {
+    width: 70%;
+}
+
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.stats-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid #e5e5e6;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.stats-value {
+    font-size: 32px;
+}
+
+
+/* === SECTION TODOS OS LIVROS === */
+
+.books-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.select-filter {
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #e5e5e6;
+}
+
+.table {
+    width: 100%;
+}
+
+.table-header {
+    padding: 10px;
+    border-top: 1px solid #e5e5e6;
+    border-bottom: 1px solid #e5e5e6;
+}
+
+.table-cell {
+    padding: 10px;
+    font-size: 14px;
+    border-bottom: 1px solid #e5e5e6;
+    text-align: center;
+}
+
+.book-table-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.books-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.page {
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+.page[data-status="active"] {
+    background-color: #5259b2;
+    color: #f8f8fa;
+}
+
+.page[data-status="inactive"] {
+    color: #000;
+}
+
+
+/* === SECTION MODAL LIVRO === */
+
+.book-modal {
+    width: fit-content;
+    height: fit-content;
+    align-self: center;
+    display: none;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.form-field {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-label {
+    font-size: 14px;
+}
+
+.upload-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px dashed #e5e5e6;
+    padding: 20px;
+    gap: 5px;
+}
+
+.form-button {
+    background-color: #5259b2;
+    border: none;
+    color: #f8f8fa;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    align-self: flex-end;
+    width: fit-content;
+}
+
