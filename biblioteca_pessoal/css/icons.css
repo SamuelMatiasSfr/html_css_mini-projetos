@@ -1,0 +1,73 @@
+.icon-add-book {
+    background-color: #5259b2;
+    color: #f8f8fa;
+    padding: 5px;
+    border-radius: 50%;
+    width: fit-content;
+}
+
+.icon-stats {
+    font-size: 30px;
+    padding: 10px;
+    border-radius: 50%;
+    width: fit-content;
+}
+
+.icon-book {
+    color: #5259b2;
+    background-color: #e5e5e6;
+}
+
+.icon-check {
+    color: #35a04f;
+    background-color: #c1d8c7;
+}
+
+.icon-clock {
+    color: #e7a125;
+    background-color: #f3d5a5;
+}
+
+.icon-marker {
+    color: #3a86ec;
+    background-color: #b4d5ff;
+}
+
+.icon-action {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.icon-read {
+    color: #35a04f;
+    background-color: #c1d8c7;
+}
+
+.icon-edit {
+    color: #5259b2;
+    background-color: #e5e5e6;
+}
+
+.icon-delete {
+    color: #f54046;
+    background-color: #fddede;
+}
+
+.icon-arrow {
+    padding: 5px 10px;
+}
+
+.icon-close {
+    padding: 1px;
+    background-color: #f54046;
+    color: #f8f8fa;
+    font-size: 20px;
+}
+
+.icon-upload {
+    background-color: #5259b2;
+    color: #f8f8fa;
+    padding: 5px;
+    border-radius: 50%;
+    width: fit-content;
+}

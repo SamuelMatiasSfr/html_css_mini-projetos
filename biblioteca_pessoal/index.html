@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"/> 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/icons.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <title>Minha Biblioteca</title>
 </head>
 <body>
@@ -136,59 +139,65 @@
             </footer>
         </section>
 
-        <section class="section book-modal">
-            <header>
-                <h1 class="section-title">Adicionar Livro</h1>
-                <small class="aux-text">Preencha as informações do livro abaixo.</small> 
-            </header>
 
-            <form class="form">
-                <fieldset class="form-field">
-                    <label class="form-label" for="book-image">Imagem do Livro</label>
-                    <label for="imagem" class="upload-box">
-                        <input class="input" name="book-image" type="file" accept="image/*" hidden required>
-                        <span class="icon-upload material-symbols-outlined">upload</span> 
-                        <span class="aux-text">Clique ou arraste a imagem aqui</span>
-                    </label>
-                </fieldset>
+        <div class="book-modal">
+            <section class="section">
+                <header class="book-modal-header">
+                    <div class="header-content">
+                        <h1 class="section-title">Adicionar Livro</h1>
+                        <small class="aux-text">Preencha as informações do livro abaixo.</small> 
+                    </div>
+                    <span class="icon-close material-symbols-outlined">close</span> 
+                </header>
 
-                <fieldset class="form-field">
-                    <label class="form-label" for="book-name">Nome do Livro</label>  
-                    <input class="input" name="book-name" type="text" required>
-                </fieldset>
+                <form class="form">
+                    <fieldset class="form-field">
+                        <label class="form-label" for="book-image">Imagem do Livro</label>
+                        <label for="imagem" class="upload-box">
+                            <input class="input" name="book-image" type="file" accept="image/*" hidden required>
+                            <span class="icon-upload material-symbols-outlined">upload</span> 
+                            <span class="aux-text">Clique ou arraste a imagem aqui</span>
+                        </label>
+                    </fieldset>
 
-                <fieldset class="form-field">
-                    <label class="form-label" for="book-autor">Autor</label>  
-                    <input class="input" name="book-category" type="text" required>
-                </fieldset>
+                    <fieldset class="form-field">
+                        <label class="form-label" for="book-name">Nome do Livro</label>  
+                        <input class="input" name="book-name" type="text" required>
+                    </fieldset>
 
-                <fieldset class="form-field">
-                    <label class="form-label" for="book-name">Categoria</label>
-                    <select class="input" name="book-category" required>
-                        <option value="romance">Romance</option>
-                        <option value="fantasia">Fantasia</option>
-                        <option value="desenvolvimento-pessoal">Desenvolvimento Pessoal</option>
-                        <option value="suspense-thriller">Suspense</option>
-                        <option value="ficcao-cientifica">Ficção Científica</option>
-                        <option value="biografias-autobiografias">Biografias e Autobiografias</option>
-                        <option value="negocios-financas">Negócios e Finanças</option>
-                        <option value="mangas-hqs">Mangás e HQs</option>
-                        <option value="terror">Terror</option>
-                    </select>
-                </fieldset>
+                    <fieldset class="form-field">
+                        <label class="form-label" for="book-autor">Autor</label>  
+                        <input class="input" name="book-category" type="text" required>
+                    </fieldset>
 
-                <div class="form-field">
-                    <label class="form-label" for="book-status">Status</label>
-                    <select class="input" name="book-status" required>
-                        <option value="lido">Lido</option>
-                        <option value="lendo">Lendo</option>
-                        <option value="quero-ler">Quero Ler</option>
-                    </select>
-                </div>
+                    <fieldset class="form-field">
+                        <label class="form-label" for="book-name">Categoria</label>
+                        <select class="input" name="book-category" required>
+                            <option value="romance">Romance</option>
+                            <option value="fantasia">Fantasia</option>
+                            <option value="desenvolvimento-pessoal">Desenvolvimento Pessoal</option>
+                            <option value="suspense-thriller">Suspense</option>
+                            <option value="ficcao-cientifica">Ficção Científica</option>
+                            <option value="biografias-autobiografias">Biografias e Autobiografias</option>
+                            <option value="negocios-financas">Negócios e Finanças</option>
+                            <option value="mangas-hqs">Mangás e HQs</option>
+                            <option value="terror">Terror</option>
+                        </select>
+                    </fieldset>
 
-                <button class="form-button" type="submit">Adicionar Livro</button>
-            </form>
-        </section>
+                    <div class="form-field">
+                        <label class="form-label" for="book-status">Status</label>
+                        <select class="input" name="book-status" required>
+                            <option value="lido">Lido</option>
+                            <option value="lendo">Lendo</option>
+                            <option value="quero-ler">Quero Ler</option>
+                        </select>
+                    </div>
+
+                    <button class="form-button" type="submit">Adicionar Livro</button>
+                </form>
+            </section>
+        </div>
     </main>
 </body>
 </html>
